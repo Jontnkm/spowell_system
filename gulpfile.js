@@ -109,7 +109,7 @@ function browser(cb){
             baseDir:'./project/dist',
             directory: true,
         },
-        startPath: "/guide/filelist.html",
+        startPath: "/guide/filelist_spowell.html",
     });
     watch('./project/dist/**/*.html').on('change',function(){
         console.log("html이 변했습니다");

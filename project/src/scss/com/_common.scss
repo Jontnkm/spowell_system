@@ -771,11 +771,19 @@ textArea.areaMd {height:150px;}
 .frmChoBox.type03 {margin:0; width:13.9%;}
 
 /* 버튼식 체크박스/라디오 박스 */
-.frmChoBtn {display:flex;} 
-.frmChoBtn .iptChk + .iptLbl {width:100px; height:30px; font-size:14px; text-align:center; color:#fff; line-height:26px; border-radius:3px; border:1px solid #444; background:#666;}
-.frmChoBtn .iptChk:checked + .iptLbl {border:1px solid #2784ff; background:#319af6;}
-.frmChoBtn .iptRdo + .iptLbl {width:100px; height:30px; font-size:14px; text-align:center; color:#fff; line-height:26px; border-radius:3px; border:1px solid #444; background:#666;}
-.frmChoBtn .iptRdo:checked + .iptLbl {border:1px solid #2784ff; background:#319af6;}
+.frmChoBtn {
+    display:flex;
+
+    &.fullWidth {
+        width:100%; gap:10px; margin-bottom:20px;
+        
+        > .iptLbl {width:100% !important;}
+    }
+} 
+.frmChoBtn .iptChk + .iptLbl {width:100px; height:30px; font-size:14px; text-align:center; color:#444; line-height:26px; border-radius:3px; border:1px solid #444; background:#fff;}
+.frmChoBtn .iptChk:checked + .iptLbl {border:1px solid #2784ff; background:#319af6; color:#fff;}
+.frmChoBtn .iptRdo + .iptLbl {width:100px; height:30px; font-size:14px; text-align:center; color:#444; line-height:26px; border-radius:3px; border:1px solid #444; background:#fff;}
+.frmChoBtn .iptRdo:checked + .iptLbl {border:1px solid #2784ff; background:#319af6;  color:#fff;}
 
 /* 검색 버튼식 체크박스/라디오 박스 */
 .cptSearchArea {
