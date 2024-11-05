@@ -1,0 +1,28 @@
+/*테이블 가로스크롤 추가*/
+.cptTable {
+    width:100%; border-top:1px solid #000; background:#fff;
+    &.withScroll {
+        overflow-x:scroll;
+    }
+    &::-webkit-scrollbar {width:4px; background:rgba(132, 132, 132, 0.2);}
+    &::-webkit-scrollbar-thumb {background:#9fa0a0;}
+}
+
+/*라디오 버튼식 추가*/
+.frmChoBtn {
+    display:flex;
+
+    &.fullWidth {
+        width:100%; gap:10px; margin-bottom:20px;
+        
+        > .iptLbl {width:100% !important;}
+    }
+} 
+
+/*버튼 영역 커스터마이즈*/
+.cptGroupBtm {
+    width:100%; margin-top:12px; display:flex; position:relative;
+    &.custom {
+        align-items: center; gap:10px; margin-bottom:10px !important;
+    }
+}

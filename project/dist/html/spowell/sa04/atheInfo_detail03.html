@@ -20,7 +20,7 @@
 	<link rel="stylesheet" href="../../../common/css/tui-date-picker.css" /><!--20240419 toast date picker css 추가-->
 	<!-- <link rel="stylesheet" href="../../../common/css/jquery-ui.min.css" /> -->
 	<link rel="stylesheet" href="../../../common/css/style.css" />
-	
+	<link rel="stylesheet" href="../../../common/css/spowell.css" />
 	
 	<script src="../../../common/js/jquery-3.4.1.min.js"></script>
 	<!-- <script src="../../../common/js/jquery-ui.min.js"></script> -->
@@ -254,174 +254,189 @@
 
     <div class="comSmTit">
         <div class="alignL">
-            <div class="title">체육인 기본정보</div>
+            <div class="title">경기력 성과포상금-선수</div>
         </div>
     </div>
 
     <div class="cptTable">
         <table class="tbView">
             <colgroup>
-                <col style="width:110px;" />
-                <col style="width:auto;" />
-                <col style="width:110px;" />
-                <col style="width:auto;" />
-                <col style="width:110px;" />
-                <col style="width:auto;" />
+                <col style="width:120px">
+                <col style="width:120px">
+                <col style="width:150px">
+                <col style="width:150px">
+                <col style="width:150px">
+                <col style="width:150px">
+                <col style="width:120px">
+                <col style="width:250px">
+                <col style="width:auto">
             </colgroup>
             <caption></caption>
+            <thead>
+                <tr>
+                    <th>지급일자</th>
+                    <th>지급항목</th>
+                    <th>지급액</th>
+                    <th>소급금액</th>
+                    <th>공제금액</th>
+                    <th>실지급액</th>
+                    <th>은행</th>
+                    <th>계좌번호</th>
+                    <th>비고</th>
+                </tr>
+            </thead>
             <tbody>
                 <tr>
-                    <th>장애여부</th>
-                    <td class="center">
-                        <input type="text">
-                    </td>
-                    <th>종목</th>
-                    <td class="center">
-                        <input type="text">
-                    </td>
-                    <th>소속</th>
-                    <td class="center">
-                        <input type="text">
-                    </td>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">월정금</td>
+                    <td class="right">300,000</td>
+                    <td class="right"></td>
+                    <td class="right">300,000</td>
+                    <td class="right">0</td>
+                    <td class="center">국민</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
                 </tr>
                 <tr>
-                    <th>휴대전화</th>
-                    <td class="center">
-                        <select name="" id="" class="iptSlt frmXs">
-                            <option value="">선택</option>
-                        </select>
-                        <div class="textBox deco">-</div>
-                        <input type="text" class="iptText frmXs" />
-                        <div class="textBox deco">-</div>
-                        <input type="text" class="iptText frmXs" />
-                    </td>
-                    <th>이메일</th>
-                    <td class="center">
-                        <input type="text">
-                    </td>
-                    <th>체육인(선수)<br>번호</th>
-                    <td class="center">
-                        <input type="text">
-                    </td>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">월정금</td>
+                    <td class="right">300,000</td>
+                    <td class="right"></td>
+                    <td class="right">300,000</td>
+                    <td class="right">0</td>
+                    <td class="center">국민</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
                 </tr>
                 <tr>
-                    <th>주소</th>
-                    <td class="center" colspan="3">
-                        <input type="text" class="frmHalf">
-                        <input type="text" class="frmHalf">
-                    </td>
-                    <th>장애인번호</th>
-                    <td class="center">
-                        <input type="text">
-                    </td>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">일시장려금</td>
+                    <td class="right">600,000</td>
+                    <td class="right"></td>
+                    <td class="right">600,000</td>
+                    <td class="right">0</td>
+                    <td class="center">국민</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">월정금</td>
+                    <td class="right">300,000</td>
+                    <td class="right">600,000</td>
+                    <td class="right">900,000</td>
+                    <td class="right">0</td>
+                    <td class="center">국민</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">월정금</td>
+                    <td class="right">300,000</td>
+                    <td class="right"></td>
+                    <td class="right">300,000</td>
+                    <td class="right">0</td>
+                    <td class="center">국민</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <!--합산구역-->
+                <tr>
+                    <th colspan="2">합계</th>
+                    <th class="right">1,591,025,000</th>
+                    <th class="right">600,000</th>
+                    <th class="right">300,000</th>
+                    <th class="right">1,591,025,000</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
                 </tr>
             </tbody>
         </table>
     </div>
-    <div class="textBox clar">체육인 기본정보를 수정하면, 수정된 내용이 [체육인정보관리]에 자동 반영됩니다.</div>
     
     <div class="comSmTit">
         <div class="alignL">
-            <div class="title">지급은행계좌정보</div>
+            <div class="title">경기력 성과포상금-지도자</div>
         </div>
     </div>
 
     <div class="cptTable">
         <table class="tbView">
             <colgroup>
-                <col style="width:200px;" />
-                <col style="width:200px;" />
-                <col style="width:auto;" />
-                <col style="width:200px;" />
-                <col style="width:200px;" />
-                <col style="width:200px;" />
+                <col style="width:120px">
+                <col style="width:120px">
+                <col style="width:150px">
+                <col style="width:150px">
+                <col style="width:150px">
+                <col style="width:150px">
+                <col style="width:120px">
+                <col style="width:250px">
+                <col style="width:auto">
             </colgroup>
             <caption></caption>
+            <thead>
+                <tr>
+                    <th>지급일자</th>
+                    <th>지급항목</th>
+                    <th colspan="4">지급액</th>
+                    <!-- <th>소급금액</th>
+                    <th>공제금액</th>
+                    <th>실지급액</th> -->
+                    <th>은행</th>
+                    <th>계좌번호</th>
+                    <th>비고</th>
+                </tr>
+            </thead>
             <tbody>
                 <tr>
-                    <td class="center">경기력 성과포상금</td>
-                    <td class="center">00은행</td>
-                    <td class="center">0000-00-000000</td>
-                    <td class="center">홍길순</td>
                     <td class="center">YYYY-MM-DD</td>
-                    <td class="center">-</td>
-                </tr>
-                <tr>
-                    <td class="center">생활지원금</td>
-                    <td class="center">00은행</td>
-                    <td class="center">0000-00-000000</td>
-                    <td class="center">홍길순</td>
-                    <td class="center">YYYY-MM-DD</td>
-                    <td class="center">-</td>
-                </tr>
-                <tr>
-                    <td class="center">교육지원금-국내대학원</td>
-                    <td class="center">00은행</td>
-                    <td class="center">0000-00-000000</td>
-                    <td class="center">홍길순</td>
-                    <td class="center">YYYY-MM-DD</td>
-                    <td class="center">-</td>
-                </tr>
-                <tr>
-                    <td class="center">교육지원금-국외유학</td>
-                    <td class="center">00은행</td>
-                    <td class="center">0000-00-000000</td>
-                    <td class="center">홍길순</td>
-                    <td class="center">YYYY-MM-DD</td>
-                    <td class="center">-</td>
-                </tr>
-                <tr>
-                    <td class="center">원로체육인지원</td>
-                    <td class="center">00은행</td>
-                    <td class="center">0000-00-000000</td>
-                    <td class="center">홍길순</td>
-                    <td class="center">YYYY-MM-DD</td>
-                    <td class="center">-</td>
-                </tr>
-                <tr>
-                    <td class="center">체육유공자지원</td>
-                    <td class="center">00은행</td>
-                    <td class="center">0000-00-000000</td>
-                    <td class="center">홍길순</td>
-                    <td class="center">YYYY-MM-DD</td>
-                    <td class="center">-</td>
-                </tr>
-                <tr>
-                    <td class="center">체육장학금</td>
-                    <td class="center">00은행</td>
-                    <td class="center">0000-00-000000</td>
-                    <td class="center">홍길순</td>
-                    <td class="center">YYYY-MM-DD</td>
-                    <td class="center">-</td>
-                </tr>
-                <!--수정모드-->
-                <tr>
-                    <td class="center">
-                        <div class="frmGroup">
-                            <input type="text">
-                        </div>
-                    </td>
-                    <td class="center">
-                        <div class="frmGroup">
-                            <select name="" id="" class="iptSlt">
-                                <option value="">2023</option>
-                                <option value=""></option>
-                            </select>
-                        </div>
-                    </td>
-                    <td class="center">
-                        <div class="frmGroup">
-                            <input type="text">
-                            <button class="gridBtn dkbLine">계좌확인</button>
-                        </div>
-                    </td>
+                    <td class="center">월정금</td>
+                    <td class="right" colspan="4">300,000</td>
+                    <td class="center">국민</td>
                     <td class="center"></td>
                     <td class="center"></td>
-                    <td class="center">
-                        <div class="frmGroup">
-                            <input type="text">
-                        </div>
-                    </td>
+                </tr>
+                <tr>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">월정금</td>
+                    <td class="right" colspan="4">300,000</td>
+                    <td class="center">국민</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">일시장려금</td>
+                    <td class="right" colspan="4">600,000</td>
+                    <td class="center">국민</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">월정금</td>
+                    <td class="right" colspan="4">300,000</td>
+                    <td class="center">국민</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">월정금</td>
+                    <td class="right" colspan="4">300,000</td>
+                    <td class="center">국민</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <!--합산구역-->
+                <tr>
+                    <th colspan="2">합계</th>
+                    <th class="right" colspan="4">1,591,025,000</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
                 </tr>
             </tbody>
         </table>
@@ -429,84 +444,267 @@
 
     <div class="comSmTit">
         <div class="alignL">
-            <div class="title">체육인 자격정보</div>
+            <div class="title">생활지원금</div>
         </div>
     </div>
 
     <div class="cptTable">
         <table class="tbView">
             <colgroup>
-                <col style="width:80px;" />
-                <col style="width:200px;" />
-                <col style="width:200px;" />
-                <col style="width:200px;" />
-                <col style="width:200px;" />
-                <col style="width:auto;" />
+                <col style="width:120px">
+                <col style="width:120px">
+                <col style="width:150px">
+                <col style="width:150px">
+                <col style="width:150px">
+                <col style="width:150px">
+                <col style="width:120px">
+                <col style="width:250px">
+                <col style="width:auto">
             </colgroup>
             <caption></caption>
+            <thead>
+                <tr>
+                    <th>지급일자</th>
+                    <th>지급항목</th>
+                    <th colspan="4">지급액</th>
+                    <!-- <th>소급금액</th>
+                    <th>공제금액</th>
+                    <th>실지급액</th> -->
+                    <th>은행</th>
+                    <th>계좌번호</th>
+                    <th>비고</th>
+                </tr>
+            </thead>
             <tbody>
                 <tr>
-                    <td class="center">4</td>
-                    <td class="center">사망</td>
                     <td class="center">YYYY-MM-DD</td>
-                    <td class="center">주민전산연계</td>
-                    <td class="center">YYYY-MM-DD</td>
-                    <td class="center">
-                        <div class="frmGroup">
-                            <input type="text">
-                        </div>
-                    </td>
+                    <td class="center">월정금</td>
+                    <td class="right" colspan="4">300,000</td>
+                    <td class="center">국민</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
                 </tr>
                 <tr>
-                    <td class="center">3</td>
-                    <td class="center">국적상실</td>
                     <td class="center">YYYY-MM-DD</td>
-                    <td class="center">주민전산연계</td>
-                    <td class="center">YYYY-MM-DD</td>
-                    <td class="center">
-                        <div class="frmGroup">
-                            <input type="text">
-                        </div>
-                    </td>
+                    <td class="center">월정금</td>
+                    <td class="right" colspan="4">300,000</td>
+                    <td class="center">국민</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
                 </tr>
                 <tr>
-                    <td class="center">2</td>
-                    <td class="center">체육단체 징계</td>
                     <td class="center">YYYY-MM-DD</td>
-                    <td class="center">
-                        <a href="#none">증빙파일.pdf</a>
-                    </td>
-                    <td class="center">YYYY-MM-DD</td>
-                    <td class="center">
-                        <div class="frmGroup">
-                            <input type="text">
-                        </div>
-                    </td>
+                    <td class="center">일시장려금</td>
+                    <td class="right" colspan="4">600,000</td>
+                    <td class="center">국민</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
                 </tr>
                 <tr>
-                    <td class="center">1</td>
-                    <td class="center">범죄경력사실확인</td>
                     <td class="center">YYYY-MM-DD</td>
-                    <td class="center">
-                        <a href="#none">증빙파일.pdf</a>
-                    </td>
+                    <td class="center">월정금</td>
+                    <td class="right" colspan="4">300,000</td>
+                    <td class="center">국민</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
                     <td class="center">YYYY-MM-DD</td>
-                    <td class="center">
-                        <div class="frmGroup">
-                            <input type="text">
-                        </div>
-                    </td>
+                    <td class="center">월정금</td>
+                    <td class="right" colspan="4">300,000</td>
+                    <td class="center">국민</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <!--합산구역-->
+                <tr>
+                    <th colspan="2">합계</th>
+                    <th class="right" colspan="4">1,591,025,000</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
                 </tr>
             </tbody>
         </table>
     </div>
+    
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">교육지원금-국내대학원</div>
+        </div>
+    </div>
+    
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:120px">
+                <col style="width:120px">
+                <col style="width:150px">
+                <col style="width:150px">
+                <col style="width:150px">
+                <col style="width:150px">
+                <col style="width:120px">
+                <col style="width:250px">
+                <col style="width:auto">
+            </colgroup>
+            <caption></caption>
+            <thead>
+                <tr>
+                    <th>지급일자</th>
+                    <th>지급항목</th>
+                    <th colspan="4">지급액</th>
+                    <!-- <th>소급금액</th>
+                    <th>공제금액</th>
+                    <th>실지급액</th> -->
+                    <th>은행</th>
+                    <th>계좌번호</th>
+                    <th>비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">월정금</td>
+                    <td class="right" colspan="4">300,000</td>
+                    <td class="center">국민</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">월정금</td>
+                    <td class="right" colspan="4">300,000</td>
+                    <td class="center">국민</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">일시장려금</td>
+                    <td class="right" colspan="4">600,000</td>
+                    <td class="center">국민</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">월정금</td>
+                    <td class="right" colspan="4">300,000</td>
+                    <td class="center">국민</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">월정금</td>
+                    <td class="right" colspan="4">300,000</td>
+                    <td class="center">국민</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <!--합산구역-->
+                <tr>
+                    <th colspan="2">합계</th>
+                    <th class="right" colspan="4">1,591,025,000</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">교육지원금-국외유학</div>
+        </div>
+    </div>
 
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:120px">
+                <col style="width:120px">
+                <col style="width:150px">
+                <col style="width:150px">
+                <col style="width:150px">
+                <col style="width:150px">
+                <col style="width:120px">
+                <col style="width:250px">
+                <col style="width:auto">
+            </colgroup>
+            <caption></caption>
+            <thead>
+                <tr>
+                    <th>지급일자</th>
+                    <th>지급항목</th>
+                    <th colspan="4">지급액</th>
+                    <!-- <th>소급금액</th>
+                    <th>공제금액</th>
+                    <th>실지급액</th> -->
+                    <th>은행</th>
+                    <th>계좌번호</th>
+                    <th>비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">월정금</td>
+                    <td class="right" colspan="4">300,000</td>
+                    <td class="center">국민</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">월정금</td>
+                    <td class="right" colspan="4">300,000</td>
+                    <td class="center">국민</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">일시장려금</td>
+                    <td class="right" colspan="4">600,000</td>
+                    <td class="center">국민</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">월정금</td>
+                    <td class="right" colspan="4">300,000</td>
+                    <td class="center">국민</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <tr>
+                    <td class="center">YYYY-MM-DD</td>
+                    <td class="center">월정금</td>
+                    <td class="right" colspan="4">300,000</td>
+                    <td class="center">국민</td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                </tr>
+                <!--합산구역-->
+                <tr>
+                    <th colspan="2">합계</th>
+                    <th class="right" colspan="4">1,591,025,000</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <!-- 그리드/테이블 하단 버튼 -->
     <div class="cptGroupBtm alignR">
         <div class="comSideOpt">
             <!-- <button class="srhBtn red">상세조회</button>
             <button class="srhBtn blue">상세조회</button>-->
-            <button class="srhBtn blue">저장</button>
+            <!-- <button class="srhBtn blue">저장</button> -->
             <button class="srhBtn dkbLine">목록</button>
             <!-- <button class="srhBtn dkbLine">상세조회</button>
             <button class="srhBtn bLine">상세조회</button> -->

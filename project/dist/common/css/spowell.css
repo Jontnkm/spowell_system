@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/*테이블 가로스크롤 추가*/
+.cptTable {
+	width: 100%;
+	border-top: 1px solid #000;
+	background: #fff;
+}
+.cptTable.withScroll {
+	overflow-x: scroll;
+}
+.cptTable::-webkit-scrollbar {
+	width: 4px;
+	background: rgba(132, 132, 132, 0.2);
+}
+.cptTable::-webkit-scrollbar-thumb {
+	background: #9fa0a0;
+}
+
+/*라디오 버튼식 추가*/
+.frmChoBtn {
+	display: flex;
+}
+.frmChoBtn.fullWidth {
+	width: 100%;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+.frmChoBtn.fullWidth > .iptLbl {
+	width: 100% !important;
+}
+
+/*버튼 영역 커스터마이즈*/
+.cptGroupBtm {
+	width: 100%;
+	margin-top: 12px;
+	display: flex;
+	position: relative;
+}
+.cptGroupBtm.custom {
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 10px !important;
+}
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNwb3dlbGwuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUE7QUFDQTtDQUNJO0NBQVk7Q0FBMkI7O0FBQ3ZDO0NBQ0k7O0FBRUo7Q0FBc0I7Q0FBVzs7QUFDakM7Q0FBNEI7OztBQUdoQztBQUNBO0NBQ0k7O0FBRUE7Q0FDSTtDQUFZO0NBQVU7O0FBRXRCO0NBQVc7OztBQUluQjtBQUNBO0NBQ0k7Q0FBWTtDQUFpQjtDQUFjOztBQUMzQztDQUNJO0NBQXFCO0NBQVUiLCJmaWxlIjoic3Bvd2VsbC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKu2FjOydtOu4lCDqsIDroZzsiqTtgazroaQg7LaU6rCAKi9cclxuLmNwdFRhYmxlIHtcclxuICAgIHdpZHRoOjEwMCU7IGJvcmRlci10b3A6MXB4IHNvbGlkICMwMDA7IGJhY2tncm91bmQ6I2ZmZjtcclxuICAgICYud2l0aFNjcm9sbCB7XHJcbiAgICAgICAgb3ZlcmZsb3cteDpzY3JvbGw7XHJcbiAgICB9XHJcbiAgICAmOjotd2Via2l0LXNjcm9sbGJhciB7d2lkdGg6NHB4OyBiYWNrZ3JvdW5kOnJnYmEoMTMyLCAxMzIsIDEzMiwgMC4yKTt9XHJcbiAgICAmOjotd2Via2l0LXNjcm9sbGJhci10aHVtYiB7YmFja2dyb3VuZDojOWZhMGEwO31cclxufVxyXG5cclxuLyrrnbzrlJTsmKQg67KE7Yq87IudIOy2lOqwgCovXHJcbi5mcm1DaG9CdG4ge1xyXG4gICAgZGlzcGxheTpmbGV4O1xyXG5cclxuICAgICYuZnVsbFdpZHRoIHtcclxuICAgICAgICB3aWR0aDoxMDAlOyBnYXA6MTBweDsgbWFyZ2luLWJvdHRvbToyMHB4O1xyXG4gICAgICAgIFxyXG4gICAgICAgID4gLmlwdExibCB7d2lkdGg6MTAwJSAhaW1wb3J0YW50O31cclxuICAgIH1cclxufSBcclxuXHJcbi8q67KE7Yq8IOyYgeyXrSDsu6TsiqTthLDrp4jsnbTspogqL1xyXG4uY3B0R3JvdXBCdG0ge1xyXG4gICAgd2lkdGg6MTAwJTsgbWFyZ2luLXRvcDoxMnB4OyBkaXNwbGF5OmZsZXg7IHBvc2l0aW9uOnJlbGF0aXZlO1xyXG4gICAgJi5jdXN0b20ge1xyXG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7IGdhcDoxMHB4OyBtYXJnaW4tYm90dG9tOjEwcHggIWltcG9ydGFudDtcclxuICAgIH1cclxufSJdfQ== */

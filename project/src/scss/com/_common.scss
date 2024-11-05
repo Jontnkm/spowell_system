@@ -460,9 +460,7 @@
 
 
 /* ---------------------------- table :: basic ---------------------------- */
-.cptTable {width:100%; border-top:1px solid #000; background:#fff; overflow-x:scroll;}
-.cptTable::-webkit-scrollbar {width:4px; background:rgba(132, 132, 132, 0.2);}
-.cptTable::-webkit-scrollbar-thumb {background:#9fa0a0;}
+.cptTable {width:100%; border-top:1px solid #000; background:#fff;}
 .cptTable .tbWrite {width:100%;}
 .cptTable .tbWrite thead th {height:42px; font-size:14px; font-weight:500; color:#000; background:#f5f5f5;}
 .cptTable .tbWrite tbody th {height:42px; padding:10px 10px; font-size:14px; font-weight:500; color:#000; vertical-align:top; border-bottom:1px solid rgba(132, 132, 132, 0.2);}
@@ -774,15 +772,7 @@ textArea.areaMd {height:150px;}
 .frmChoBox.type03 {margin:0; width:13.9%;}
 
 /* 버튼식 체크박스/라디오 박스 */
-.frmChoBtn {
-    display:flex;
-
-    &.fullWidth {
-        width:100%; gap:10px; margin-bottom:20px;
-        
-        > .iptLbl {width:100% !important;}
-    }
-} 
+.frmChoBtn {display:flex;} 
 .frmChoBtn .iptChk + .iptLbl {width:100px; height:30px; font-size:14px; text-align:center; color:#444; line-height:26px; border-radius:3px; border:1px solid #444; background:#fff;}
 .frmChoBtn .iptChk:checked + .iptLbl {border:1px solid #2784ff; background:#319af6; color:#fff;}
 .frmChoBtn .iptRdo + .iptLbl {width:100px; height:30px; font-size:14px; text-align:center; color:#444; line-height:26px; border-radius:3px; border:1px solid #444; background:#fff;}
@@ -1148,7 +1138,7 @@ textArea.areaMd {height:150px;}
 .lytLogin .cptLogin {position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); -webkit-transform:translate(-50%, -50%); -ms-transform:translate(-50%, -50%); -moz-transform:translate(-50%, -50%); -o-transform:translate(-50%, -50%); width:1000px; border-radius:30px; box-sizing:border-box; overflow:hidden; height:500px; box-shadow:5px 5px 68px 0 rgba(129,129,129,0.3);}
 .lytLogin .cptLogin .lgInner {display:flex; flex-flow:row nowrap; justify-content: center; align-items: center;}
 .lytLogin .cptLogin .lgInner > div.titBox {width:400px; height:500px; background:#2a2d3e; padding: 60px 50px; box-sizing:border-box;}
-.lytLogin .cptLogin .lgInner > div.titBox .mainTit {margin-top:20px; font-size:43px; color:#fff; font-weight:500; letter-spacing:-0.1em; line-height:58px;}
+.lytLogin .cptLogin .lgInner > div.titBox .mainTit {margin-top:60px; font-size:43px; color:#fff; font-weight:500; letter-spacing:-0.1em; line-height:58px;}
 .lytLogin .cptLogin .lgInner > div.titBox .btTit {margin-top:160px; font-size:18px; color:#f1f7fa; font-weight:300; letter-spacing:-0.05em; line-height:normal;}
 .lytLogin .cptLogin .lgInner > div.titBox .btTit span {font-weight:bold; color:var(--basic-color); vertical-align: top;}
 .lytLogin .cptLogin .lgInner > div.fnBox {width:600px; height:500px; background:#fff; padding: 60px 100px; box-sizing:border-box;}
