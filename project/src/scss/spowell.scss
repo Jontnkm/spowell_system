@@ -8,6 +8,44 @@
     &::-webkit-scrollbar-thumb {background:#9fa0a0;}
 }
 
+.cptGrid {
+    &.withScroll {
+        overflow-x:scroll;
+    }
+    &::-webkit-scrollbar {width:4px; background:rgba(132, 132, 132, 0.2);}
+    &::-webkit-scrollbar-thumb {background:#9fa0a0;}
+
+    tr {
+        &.scndLine {
+            td {
+                &:first-of-type {
+                    padding-left:5px;
+
+                    &::after {display:none;}
+                }
+
+                &:last-of-type {
+                    padding-right:5px;
+
+                    &::after {display:none;}
+                }
+            }
+        }
+
+        td {
+            > p {
+                position:relative; padding-left:12px; 
+                &::before {content:''; position:absolute; top:50%; left:0; width:3px; height:3px; background:#333; border-radius:50%; transform:translateY(-50%);}
+            }
+                
+        }
+
+        &.line {
+            th {border-top:1px solid rgba(255,255,255,0.2)}
+        }
+    }
+}
+
 /*라디오 버튼식 추가*/
 .frmChoBtn {
     display:flex;
@@ -25,4 +63,31 @@
     &.custom {
         align-items: center; gap:10px; margin-bottom:10px !important;
     }
+
+    &.alignC {
+        .comSideOpt {
+            button {width:max-content;}
+        }
+    }
+}
+
+/*그리드 & 테이블 시작 전 또는 맨 하단 별도 옵션 영역의 안내 문구 및 버튼 기능 영역 추가*/
+.listDescription {
+    width:100%; position:relative; padding: 40px; background:#f5f5f5;
+
+    > p {
+        font-size:16px; color:#333; font-weight:500; line-height:22px; letter-spacing:-0.3px; text-align:center; 
+    }
+
+    >.horizonLyt {
+        display:flex; flex-flow: row nowrap; align-items: center; justify-content: center; gap:10px;
+        > p.title {font-size:16px;color:#333; font-weight:500; line-height:1; letter-spacing:-0.03px;}
+        > .frmGroup {min-width:150px;}
+    }
+}
+
+/*작은 상단 타이틀 색상 구분 케이스 추가*/
+.comSmTit {
+    .textBlue {color:var(--basic-color);}
+    .textRed {color:var(--basic-red);}
 }
