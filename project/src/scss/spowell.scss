@@ -29,6 +29,10 @@
 
                     &::after {display:none;}
                 }
+
+                &.excp {
+                    padding-right: 20px;
+                }
             }
         }
 
@@ -37,12 +41,13 @@
                 position:relative; padding-left:12px; 
                 &::before {content:''; position:absolute; top:50%; left:0; width:3px; height:3px; background:#333; border-radius:50%; transform:translateY(-50%);}
             }
+
+            .negative {color:var(--basic-red);}
+            .positive {color:var(--basic-color);}
                 
         }
 
-        &.line {
-            th {border-top:1px solid rgba(255,255,255,0.2)}
-        }
+        th {border:1px solid rgba(255,255,255,0.1);}
     }
 }
 
@@ -75,11 +80,12 @@
 .listDescription {
     width:100%; position:relative; padding: 40px; background:#f5f5f5;
 
-    > p {
+    p {
         font-size:16px; color:#333; font-weight:500; line-height:22px; letter-spacing:-0.3px; text-align:center; 
     }
 
     >.horizonLyt {
+        > * {margin:0; display:inline-block; width:auto;}
         display:flex; flex-flow: row nowrap; align-items: center; justify-content: center; gap:10px;
         > p.title {font-size:16px;color:#333; font-weight:500; line-height:1; letter-spacing:-0.03px;}
         > .frmGroup {min-width:150px;}
@@ -90,4 +96,21 @@
 .comSmTit {
     .textBlue {color:var(--basic-color);}
     .textRed {color:var(--basic-red);}
+}
+
+.cptGroupBtm.alignR {
+    .text {
+        display:block; width:200px; font-size:14px; font-weight:500; line-height:1; letter-spacing:-0.3px; color:#333;
+    }
+    .iptText {width:100%;}
+}
+
+.comOutGroup {
+    display:flex; flex-flow: row nowrap; align-items: center; justify-content: flex-start; gap:10px; margin-bottom:20px;
+
+    > p {font-size:16px; color:#333; font-weight:500; line-height:1;}
+
+    .frmGroup {
+        button {}
+    }
 }

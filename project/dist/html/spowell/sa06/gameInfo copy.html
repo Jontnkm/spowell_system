@@ -20,7 +20,7 @@
 	<link rel="stylesheet" href="../../../common/css/tui-date-picker.css" /><!--20240419 toast date picker css 추가-->
 	<!-- <link rel="stylesheet" href="../../../common/css/jquery-ui.min.css" /> -->
 	<link rel="stylesheet" href="../../../common/css/style.css" />
-	
+	<link rel="stylesheet" href="../../../common/css/spowell.css" />
 	
 	<script src="../../../common/js/jquery-3.4.1.min.js"></script>
 	<!-- <script src="../../../common/js/jquery-ui.min.js"></script> -->
@@ -254,8 +254,8 @@
                 </tr>
                 <tr>
                     <td colspan="4" class="right">
-                        <button class="btnSearch">조회</button>
-                        <button class="btnReset">초기화</button>
+                        <button type="button" class="btnSearch">조회</button>
+                        <button type="button" class="btnReset">초기화</button>
                     </td>
                 </tr>
             </tbody>
@@ -271,13 +271,13 @@
             <div class="comSideOpt">
                 <ul class="opList">
                     <li class="item">
-                        <button class="viewBtn on">10건</button>
-                        <button class="viewBtn">20건</button>
-                        <button class="viewBtn">50건</button>
-                        <button class="viewBtn">100건</button>
+                        <button type="button" class="viewBtn on">10건</button>
+                        <button type="button" class="viewBtn">20건</button>
+                        <button type="button" class="viewBtn">50건</button>
+                        <button type="button" class="viewBtn">100건</button>
                     </li>
                     <li class="item">
-                        <button class="srhBtn bLine">엑셀다운로드</button>
+                        <button type="button" class="srhBtn bLine">엑셀다운로드</button>
                     </li>
                 </ul>
             </div>
@@ -342,10 +342,10 @@
                     <td>0000-00-00</td>
                     <td>0000-00-00</td>
                     <td>
-                        <button class="gridBtn purple">상세관리</button>
-                        <!-- <button class="gridBtn red" onclick="openAlert('splAlt01');">예약취소</button>
-                        <button class="gridBtn gLine">참가신청서</button>
-                        <button class="gridBtn gLine">참가동의서</button> -->
+                        <button type="button" class="gridBtn gLine">상세관리</button>
+                        <!-- <button type="button" class="gridBtn red" onclick="openAlert('splAlt01');">예약취소</button>
+                        <button type="button" class="gridBtn gLine">참가신청서</button>
+                        <button type="button" class="gridBtn gLine">참가동의서</button> -->
                     </td>
                 </tr>
             </tbody>
@@ -354,6 +354,16 @@
     <!-- //그리드 -->
 
     <!-- 그리드/테이블 하단 버튼 -->
+    <div class="cptGroupBtm alignR">
+        <div class="comSideOpt">
+            <!-- <button type="button" class="srhBtn red">상세조회</button>
+            <button type="button" class="srhBtn blue">상세조회</button>
+            <button type="button" class="srhBtn gLine">상세조회</button> -->
+            <button type="button" class="crudBtn blue" onclick="openPopup('sample01')">등록</button>
+            <!-- <button type="button" class="srhBtn dkbLine">상세조회</button>
+            <button type="button" class="srhBtn bLine">상세조회</button> -->
+        </div>
+    </div>
 
     <!-- 페이징 -->
     <div class="comPaging">
@@ -375,148 +385,11 @@
         <a class="end" href="#"></a>
     </div>
 
-    <!-- 그리드/테이블 하단 버튼 -->
-    <div class="cptGroupBtm alignR">
-        <div class="comSideOpt">
-            <!-- <button class="srhBtn red">상세조회</button>
-            <button class="srhBtn blue">상세조회</button>
-            <button class="srhBtn gLine">상세조회</button> -->
-            <button class="srhBtn dkBlue" onclick="openPopup('sample01')">등록</button>
-            <!-- <button class="srhBtn dkbLine">상세조회</button>
-            <button class="srhBtn bLine">상세조회</button> -->
-        </div>
-    </div>
+    
 </div>
 <!-- //컨텐츠 내용 -->
 
 <!-- 팝업 영역 -->
-
-<!--20230202 팝업 추가 -->
-<div id="sample01" class="modPopup sm"> <!-- class - on : 팝업오픈 -->
-    <div class="popupDim">딤영역</div>
-    <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
-        <div class="popupInMotion">
-            <div class="popupContainer">
-                <div class="popupContArea">
-                    <button class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
-                    <div class="popTitle">대회정보</div>
-                    <div class="popCont">    
-                    <!-- 팝업 컨텐츠 영역 -->
-                        <!-- 테이블 -->
-                        <div class="cptTable">
-                            <table class="tbView">
-                                <colgroup>
-                                    <col style="width:120px;" />
-                                    <col style="width:auto;" />
-                                </colgroup>
-                                <caption></caption>
-                                <tbody>
-                                    <tr>
-                                        <th class="left">장애구분</th>
-                                        <td class="left">
-                                            <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">비장애</label></div>
-                                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">장애</label></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="left">대회구분<span class="required">*</span></th>
-                                        <td class="left">
-                                            <select name="" id="" class="iptSlt">
-                                                <option value="">선택</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="left">개최년도<span class="required">*</span></th>
-                                        <td class="left">
-                                            <select name="" id="" class="iptSlt frmXs">
-                                                <option value="">선택</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="left">대회명<span class="required">*</span></th>
-                                        <td class="left">
-                                            <input type="text" class="iptText" />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="left">개최주기<span class="required">*</span></th>
-                                        <td class="left">
-                                            <input type="text" class="iptText frmXs"><span class="textBox">년</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="left">출전국수<span class="required">*</span></th>
-                                        <td class="left">
-                                            <input type="text" class="iptText frmXs"><span class="textBox">개국</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="left">개최일자<span class="required">*</span></th>
-                                        <td class="left">
-                                            <div class="frmGroup">
-                                                <div class="iptDate frmLg"><input type="text" class="iptText" id="datepicker1"><button type="button" class="dateBtn">날짜검색</button></div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="left">종료일자<span class="required">*</span></th>
-                                        <td class="left">
-                                            <div class="frmGroup">
-                                                <div class="iptDate frmLg"><input type="text" class="iptText" id="datepicker1"><button type="button" class="dateBtn">날짜검색</button></div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="left">종목<span class="required">*</span></th>
-                                        <td class="left">
-                                            <select name="" id="" class="iptSlt">
-                                                <option value="">선택</option>
-                                            </select>
-                                            <div class="textBox clar"> * 특정종목대상대회인 경우 선택</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="left">개최도시<span class="required">*</span></th>
-                                        <td class="left">
-                                            <input type="text" class="iptText" />
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    <!-- //팝업 컨텐츠 영역 -->
-                    </div>
-                    <div class="popBtm">
-                        <button class="btn gLine">취소</button>
-                        <button class="btn dkBlue">저장</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- //팝업 영역 -->
-
-<!--20230206 로딩바-->
-<!-- <div class="modLoading">
-    <div class="dim">로딩화면 딤</div>
-    <div class="loadingArea">
-        <ul class="loadingGroup">
-            <li class="unit">로</li>
-            <li class="unit">딩</li>
-            <li class="unit">중</li>
-        </ul>
-        <div class="loadingTxt">
-            <b class="bold">처리중입니다</b>
-            잠시만 기다려 주세요
-        </div>
-    </div>
-</div> -->
-<!-- // 20230206 로딩바-->
-
 
 
 

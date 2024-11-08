@@ -10,6 +10,12 @@
     <%- include('../../layout/type_spowell/topTitle.ejs', {
         url: "../../../"
     }) %>
+    <div class="modTab out">
+        <ul class="tabMenu">
+            <li class="item "><a href="#">대회실적관리</a></li>
+            <li class="item on"><a href="#">실적평가 및 지급등록</a></li>
+        </ul>
+    </div>
     <div class="comSmTit">
         <div class="alignL">
             <div class="title">체육인 기본정보</div>
@@ -225,79 +231,248 @@
             </tbody>
         </table>
     </div>
-    <div class="textBox clar">경기력 성과포상금 지급신청 건으로 시스템에 등록되어 있는 체육인의 대회실적 현황입니다.</div>
+    <div class="textBox clar">적격여부 검토결과가 &lt;적격&gt;으로 처리된 체육인이 신청한 대회실적 현황입니다.</div>
 
     <div class="comSmTit">
         <div class="alignL">
-            <div class="title">대회실적 신규등록 [<span class="textBlue">선수</span> <!--<span class="textBlue">지도자</span>-->]</div>
+            <div class="title">위 대회실적에 대한 평가점수를 등록하고 아래 버튼을 클릭해서 &lt;지급계획등록&gt; 및 &lt;소급지급등록&gt;을 등록하세요.</div>
+        </div>
+    </div>
+    <div class="listDescription">
+        <div class="horizonLyt">
+            <p>지급시작일자 : </p>
+            <div class="frmGroup">
+                <div class="iptDate"><input type="text" class="iptText" id="datepicker1"></div>
+            </div>
+            <div class="cptGroupBtm">
+                <div class="comSideOpt">
+                    <button type="button" class="srhBtn bLine" onclick="openPopup('sample01')">지급계획등록</button>
+                </div>
+            </div>
         </div>
     </div>
 
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">체육인 지급이력 조회 및 지급계획 등록</div>&nbsp;&nbsp;
+            <div class="frmChoBox"><input id="chk006" type="checkbox" class="iptChk"><label for="chk006" class="iptLbl">월정금 소급지급 대상자 체크</label></div>
+        </div>
+    </div>
     <!-- 그리드 -->
     <div class="cptGrid withScroll">
         <table class="gridTb">
             <colgroup>
                 <col style="width:50px;">
+                <col style="width:120px;">
+                <col style="width:100px;">
+                <col style="width:100px;">
+                <col style="width:70px;">
+                <col style="width:70px;">
+                <col style="width:70px;">
+                <col style="width:70px;">
+                <col style="width:70px;">
+
+                <col style="width:100px;">
+                <col style="width:100px;">
+                <col style="width:70px;">
+                <col style="width:120px;">
+                <col style="width:120px;">
+                <col style="width:70px;">
+
+                <col style="width:70px;">
+                <col style="width:70px;">
+                <col style="width:120px;">
 
                 <col style="width:150px;">
-                <col style="width:100px;">
-                <col style="width:200px;">
-                <col style="width:100px;">
-                <col style="width:100px;">
-                <col style="width:120px;">
-                <col style="width:120px;">
-
-                <col style="width:100px;">
-                <col style="width:100px;">
-                <col style="width:100px;">
-                <col style="width:200px;">
-                <col style="width:100px;">
-                <col style="width:100px;">
-                <col style="width:120px;">
-                
-                <col style="width:100px;">
-                <col style="width:150px;">
-
-                <col style="width:100px;">
-                <col style="width:100px;">
             </colgroup>
             <thead>
                 <tr>
-                    <th rowspan=2">
-                        <div class="frmChoBox only">
-                            <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
-                        </div>
-                    </th>
+                    <th rowspan=2">번호</th>
+                    <th rowspan=2">확정일자</th>
+                    <th rowspan=2">등록번호</th>
+                    <th rowspan=2">성명</th>
+                    <th rowspan=2">신규여부</th>
+                    <th rowspan=2">기존누적</th>
+                    <th rowspan=2">실적</th>
+                    <th rowspan=2">평가점수</th>
+                    <th rowspan=2">변경누적</th>
 
-                    <th colspan="7">실적대회정보</th>
-                    <th colspan="7">실적입상정보</th>
+                    <th colspan="6">지급계획</th>
+                    <th colspan="3">월정금 소급지급</th>
 
-                    <th colspan="2">추가정보</th>
-                    <th colspan="2">신청정보</th>
+                    <th rowspan=2">비고</th>
                 </tr>
                 <tr>
-                    <th>대회구분</th>
-                    <th>개최년도</th>
-                    <th>대회명</th>
-                    <th>개최주기</th>
-                    <th>출전국 수</th>
-                    <th>개최일</th>
-                    <th>종료일</th>
+                    <th>지급기준</th>
+                    <th>지급항목</th>
+                    <th>지급금액</th>
+                    <th>지급시작</th>
+                    <th>지급종료</th>
+                    <th>증감</th>
 
-                    <th>장애여부</th>
-                    <th>장애유형</th>
-                    <th>종목</th>
-                    <th>세부종목</th>
-                    <th>실적구분</th>
-                    <th>순위</th>
-                    <th>입상일</th>
-
-                    <th>지도자인원</th>
-                    <th>지도선수</th>
-
-                    <th>포상금구분</th>
-                    <th>신청점수</th>
+                    <th>소급개월</th>
+                    <th>금액</th>
+                    <th>지급일자</th>
                 </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>YYYY-MM-DD</td>
+                    <td>00000</td>
+                    <td>홍길동</td>
+                    <td>예</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>10</td>
+                    <td>10</td>
+
+                    <td>일회성지급</td>
+                    <td>특별장려금</td>
+                    <td class="right">4,500</td>
+                    <td>YYYY-MM-DD</td>
+                    <td>YYYY-MM-DD</td>
+                    <td class="right"></td>
+
+                    <td></td>
+                    <td class="right"></td>
+                    <td></td>
+
+                    <td>업무메모란</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>YYYY-MM-DD</td>
+                    <td>00000</td>
+                    <td>홍길동</td>
+                    <td>아니오</td>
+                    <td>10</td>
+                    <td>2</td>
+                    <td>100</td>
+                    <td>110</td>
+
+                    <td>히스토리성지급</td>
+                    <td>월정금</td>
+                    <td class="right">500</td>
+                    <td>YYYY-MM-DD</td>
+                    <td>YYYY-MM-DD</td>
+                    <td class="right"></td>
+
+                    <td>3</td>
+                    <td class="right">1,500</td>
+                    <td></td>
+
+                    <td>업무메모란</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>YYYY-MM-DD</td>
+                    <td>00000</td>
+                    <td>홍길동</td>
+                    <td>아니오</td>
+                    <td>110</td>
+                    <td>1</td>
+                    <td>90</td>
+                    <td>261</td>
+
+                    <td>히스토리성지급</td>
+                    <td>월정금</td>
+                    <td class="right">800</td>
+                    <td>YYYY-MM-DD</td>
+                    <td>YYYY-MM-DD</td>
+                    <td class="right">300</td>
+
+                    <td></td>
+                    <td class="right"></td>
+                    <td></td>
+
+                    <td>업무메모란</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">4</td>
+                    <td rowspan="2">공단 승인 전</td>
+                    <td rowspan="2">00000</td>
+                    <td rowspan="2">홍길동</td>
+                    <td rowspan="2">아니오</td>
+                    <td rowspan="2">261</td>
+                    <td rowspan="2">2</td>
+                    <td rowspan="2"></td>
+                    <td rowspan="2">549</td>
+
+                    <td>현재지급기준</td>
+                    <td>월정금</td>
+                    <td class="right">1,000</td>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker2"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker2"></div>
+                        </div>
+                    </td>
+                    <td class="right">200</td>
+
+                    <td>5</td>
+                    <td class="right">12,000</td>
+                    <td>YYYY-MM-DD</td>
+
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr class="scndLine">
+                    <td>일회성지급</td>
+                    <td>일시장려금</td>
+                    <td class="right">32,500</td>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker2"></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker2"></div>
+                        </div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="excp">
+                        <input type="text">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="comSmTit">
+        <div class="alignL">
+            <div class="title">월정금 소급지급</div>
+            <div class="titText">월정금 소급지급 대상자인 경우 관련 정보를 등록하세요.</div>
+        </div>
+    </div>
+    <div class="cptTable">
+        <table class="tbView">
+            <colgroup>
+                <col style="width:40px;">
+                <col style="width:300px;">
+                <col style="width:300px;">
+                <col style="width:300px;">
+                <col style="width:300px;">
+            </colgroup>
+            <thead>
+                <th>
+                    <div class="frmChoBox only">
+                        <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                    </div>
+                </th>
+                <th>소급월</th>
+                <th>소급금액</th>
+                <th>지급일자</th>
+                <th>비고</th>
             </thead>
             <tbody>
                 <tr>
@@ -306,28 +481,16 @@
                             <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
                         </div>
                     </td>
-
-                    <td>아시안게임</td>
-                    <td>2022년</td>
-                    <td>2022 항저우아시안게임</td>
-                    <td>4</td>
-                    <td>9</td>
-                    <td>YYYY-MM-DD</td>
-                    <td>YYYY-MM-DD</td>
-
-                    <td>비장애</td>
-                    <td>-</td>
-                    <td>롤러</td>
-                    <td>롤러스테이트 EP10000M</td>
-                    <td>개인</td>
-                    <td>1</td>
-                    <td>2003-12-19</td>
-
-                    <td>2</td>
-                    <td>홍길동, 임꺽정</td>
-                    
-                    <td>월정금</td>
-                    <td>70</td>
+                    <td class="center">YYYY-MM</td>
+                    <td class="right">150,000</td>
+                    <td rowspan="3">
+                        <div class="frmGroup">
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker2"></div>
+                        </div>
+                    </td>
+                    <td rowspan="3">
+                        <textarea class="textArea areaMd"></textarea>
+                    </td>
                 </tr>
                 <tr>
                     <td>
@@ -335,86 +498,30 @@
                             <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
                         </div>
                     </td>
+                    <td class="center">YYYY-MM</td>
+                    <td class="right">300,000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="frmChoBox only">
+                            <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="frmGroup">
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker2"></div>
+                        </div>
+                    </td>
+                    <td class="right">
+                        <input type="text">
+                    </td>
+                </tr>
 
-                    <td>
-                        <div class="frmGroup">
-                            <select name="" id="" class="iptSlt ">
-                                <option value="">선택</option>
-                            </select>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="frmGroup">
-                            <select name="" id="" class="iptSlt ">
-                                <option value="">선택</option>
-                            </select>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="frmGroup">
-                            <select name="" id="" class="iptSlt ">
-                                <option value="">선택</option>
-                            </select>
-                        </div>
-                    </td>
-                    <td>4</td>
-                    <td>8</td>
-                    <td>YYYY-MM-DD</td>
-                    <td>YYYY-MM-DD</td>
-
-                    <td>장앤</td>
-                    <td>
-                        <div class="frmGroup">
-                            <select name="" id="" class="iptSlt ">
-                                <option value="">선택</option>
-                            </select>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="frmGroup">
-                            <select name="" id="" class="iptSlt ">
-                                <option value="">선택</option>
-                            </select>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="frmGroup">
-                            <select name="" id="" class="iptSlt ">
-                                <option value="">선택</option>
-                            </select>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="frmGroup">
-                            <select name="" id="" class="iptSlt ">
-                                <option value="">선택</option>
-                            </select>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="frmGroup">
-                            <select name="" id="" class="iptSlt ">
-                                <option value="">선택</option>
-                            </select>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="frmGroup">
-                            <div class="iptDate"><input type="text" class="iptText" id="datepicker1"></div>
-                        </div>
-                    </td>
-
-                    <td><input type="text"></td>
-                    <td><input type="text"></td>
-                    
-                    <td>
-                        <div class="frmGroup">
-                            <select name="" id="" class="iptSlt">
-                                <option value="">선택</option>
-                            </select>
-                        </div>
-                    </td>
-                    <td><input type="text"></td>
+                <tr>
+                    <th colspan="2"  class="center">합계</td>
+                    <th class="right">750,000</td>
+                    <th></th>
+                    <th></th>
                 </tr>
             </tbody>
         </table>
@@ -423,42 +530,18 @@
     <!-- 그리드/테이블 하단 버튼 양측 --> 
     <div class="cptGroupBtnCov">
         <div class="cptGroupBtm alignL">
-            <div class="textBox clar">각 대회실적관련 제출서류는 등록처리 후 [지원신청관리]에서 등록/관리 할 수 있습니다.</div>
+            <div class="comSideOpt">
+                <button type="button" class="srhBtn dkBlue">추가</button>
+                <button type="button" class="srhBtn dkBlue">삭제</button>
+            </div>
         </div>
         <div class="cptGroupBtm alignR">
             <div class="comSideOpt">
-                <button type="button" class="srhBtn blue">추가</button>
-                <button type="button" class="srhBtn red">삭제</button>
+                <button type="button" class="crudBtn blue">저장</button>
+                <button type="button" class="crudBtn gLine">목록</button>
             </div>
         </div>
     </div>
-
-    <div class="listDescription">
-        <div class="horizonLyt">
-            <p class="title">업무월 : </p>
-            <div class="frmGroup">
-                <select name="" id="" class="iptSlt">
-                    <option value="">2024년</option>
-                </select>
-            </div>
-            <div class="frmGroup">
-                <select name="" id="" class="iptSlt">
-                    <option value="">09월</option>
-                </select>
-            </div>
-        </div>
-    </div>
-
-    <!-- 그리드/테이블 하단 버튼 양측 --> 
-    <div class="cptGroupBtnCov">
-        <div class="cptGroupBtm alignR">
-            <div class="comSideOpt">
-                <button type="button" class="srhBtn dkBlue">저장</button>
-                <button type="button" class="srhBtn gLine">취소</button>
-            </div>
-        </div>
-    </div>
-
 </div>
 <!-- //컨텐츠 내용 -->
 

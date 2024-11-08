@@ -149,7 +149,7 @@
                     <td>0000-00-00</td>
                     <td>0000-00-00</td>
                     <td>
-                        <button type="button" class="gridBtn purple">상세관리</button>
+                        <button type="button" class="gridBtn gLine">상세관리</button>
                         <!-- <button type="button" class="gridBtn red" onclick="openAlert('splAlt01');">예약취소</button>
                         <button type="button" class="gridBtn gLine">참가신청서</button>
                         <button type="button" class="gridBtn gLine">참가동의서</button> -->
@@ -166,7 +166,7 @@
             <!-- <button type="button" class="srhBtn red">상세조회</button>
             <button type="button" class="srhBtn blue">상세조회</button>
             <button type="button" class="srhBtn gLine">상세조회</button> -->
-            <button type="button" class="srhBtn dkBlue" onclick="openPopup('sample01')">등록</button>
+            <button type="button" class="crudBtn blue" onclick="openPopup('sample01')">등록</button>
             <!-- <button type="button" class="srhBtn dkbLine">상세조회</button>
             <button type="button" class="srhBtn bLine">상세조회</button> -->
         </div>
@@ -197,132 +197,120 @@
 <!-- //컨텐츠 내용 -->
 
 <!-- 팝업 영역 -->
-
-<!--20230202 팝업 추가 -->
 <div id="sample01" class="modPopup sm"> <!-- class - on : 팝업오픈 -->
     <div class="popupDim">딤영역</div>
     <div class="popupArea"> <!-- style - 너비값(width), 높이값(height) : 팝업 너비 및 높이 지정 -->
         <div class="popupInMotion">
             <div class="popupContainer">
                 <div class="popupContArea">
-                    <button type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
+                    <button class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
                     <div class="popTitle">대회정보</div>
-                    <div class="popCont">    
-                    <!-- 팝업 컨텐츠 영역 -->
-                        <!-- 테이블 -->
+                    <div class="popCont">
                         <div class="cptTable">
                             <table class="tbView">
                                 <colgroup>
-                                    <col style="width:120px;" />
-                                    <col style="width:auto;" />
+                                    <col style="width:110px;">
+                                    <col style="width:auto;">
                                 </colgroup>
-                                <caption></caption>
                                 <tbody>
                                     <tr>
-                                        <th class="left">장애구분</th>
-                                        <td class="left">
+                                        <th>장애구분</th>
+                                        <td>
                                             <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">비장애</label></div>
-                                            <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">장애</label></div>
+                                            <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">장애</label></div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th class="left">대회구분<span class="required">*</span></th>
-                                        <td class="left">
-                                            <select name="" id="" class="iptSlt">
-                                                <option value="">선택</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="left">개최년도<span class="required">*</span></th>
-                                        <td class="left">
-                                            <select name="" id="" class="iptSlt frmXs">
-                                                <option value="">선택</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="left">대회명<span class="required">*</span></th>
-                                        <td class="left">
-                                            <input type="text" class="iptText" />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="left">개최주기<span class="required">*</span></th>
-                                        <td class="left">
-                                            <input type="text" class="iptText frmXs"><span class="textBox">년</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="left">출전국수<span class="required">*</span></th>
-                                        <td class="left">
-                                            <input type="text" class="iptText frmXs"><span class="textBox">개국</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="left">개최일자<span class="required">*</span></th>
-                                        <td class="left">
+                                        <th>대회구분 <span class="required">*</span></th>
+                                        <td>
                                             <div class="frmGroup">
-                                                <div class="iptDate frmLg"><input type="text" class="iptText" id="datepicker1"><button type="button" type="button" class="dateBtn">날짜검색</button></div>
+                                                <select name="" id="" class="iptSlt frmLg">
+                                                    <option value="">선택</option>
+                                                </select>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th class="left">종료일자<span class="required">*</span></th>
-                                        <td class="left">
+                                        <th>개최년도 <span class="required">*</span></th>
+                                        <td>
                                             <div class="frmGroup">
-                                                <div class="iptDate frmLg"><input type="text" class="iptText" id="datepicker1"><button type="button" type="button" class="dateBtn">날짜검색</button></div>
+                                                <select name="" id="" class="iptSlt frmLg">
+                                                    <option value="">2024년</option>
+                                                </select>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th class="left">종목<span class="required">*</span></th>
-                                        <td class="left">
-                                            <select name="" id="" class="iptSlt">
-                                                <option value="">선택</option>
-                                            </select>
-                                            <div class="textBox clar"> * 특정종목대상대회인 경우 선택</div>
+                                        <th>대회명 <span class="required">*</span></th>
+                                        <td>
+                                            <div class="frmGroup">
+                                                <input type="text" class="iptText">
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th class="left">개최도시<span class="required">*</span></th>
-                                        <td class="left">
-                                            <input type="text" class="iptText" />
+                                        <th>개최주기</th>
+                                        <td>
+                                            <div class="frmGroup">
+                                                <input type="text" class="iptText frmSm"> 년
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>출전국수</th>
+                                        <td>
+                                            <div class="frmGroup">
+                                                <input type="text" class="iptText frmSm"> 개국
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>개최일자 <span class="required">*</span></th>
+                                        <td>
+                                            <div class="frmGroup">
+                                                <div class="iptDate frmLg"><input type="text" class="iptText" id="datepicker1"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>종료일자 <span class="required">*</span></th>
+                                        <td>
+                                            <div class="frmGroup">
+                                                <div class="iptDate frmLg"><input type="text" class="iptText" id="datepicker1"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>종목</th>
+                                        <td>
+                                            <div class="frmGroup">
+                                                <select name="" id="" class="iptSlt frmLg">
+                                                    <option value="">선택</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>개최도시</th>
+                                        <td>
+                                            <div class="frmGroup">
+                                                <input type="text" class="iptText">
+                                            </div>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                    <!-- //팝업 컨텐츠 영역 -->
                     </div>
                     <div class="popBtm">
-                        <button type="button" class="btn gLine">취소</button>
-                        <button type="button" class="btn dkBlue">저장</button>
+                        <button class="btn gLine" onclick="closePopup('sample01');">취소</button>
+                        <button class="btn dkBlue" onclick="closePopup('sample01');">저장</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<!-- //팝업 영역 -->
-
-<!--20230206 로딩바-->
-<!-- <div class="modLoading">
-    <div class="dim">로딩화면 딤</div>
-    <div class="loadingArea">
-        <ul class="loadingGroup">
-            <li class="unit">로</li>
-            <li class="unit">딩</li>
-            <li class="unit">중</li>
-        </ul>
-        <div class="loadingTxt">
-            <b class="bold">처리중입니다</b>
-            잠시만 기다려 주세요
-        </div>
-    </div>
-</div> -->
-<!-- // 20230206 로딩바-->
 
 
 <%- include('../../layout/type_spowell/bottom.ejs', {

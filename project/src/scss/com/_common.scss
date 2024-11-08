@@ -158,10 +158,10 @@
 .comH3Group h3 {/*font-size:28px; font-weight:500; line-height:1; color:#000;*/}
 
 /* 작은 타이틀 (대부분 팝업용) */
-.comSmTit {width:100%; margin-top:40px; margin-bottom:12px; display:flex; justify-content:space-between;}
+.comSmTit {width:100%; margin-top:40px; margin-bottom:12px; display:flex; justify-content:space-between; align-items: center;}
 .comSmTit:first-child {margin-top:0;}
 .comSmTit .alignL {display:flex; align-items:end;}
-.comSmTit .alignR {display:flex; align-items:end;}
+.comSmTit .alignR {display:flex; align-items:end; width:auto;}
 .comSmTit .title {font-size:18px; font-weight:500; color:#000; line-height:26px;}
 .comSmTit .titText {padding-left:13px; font-size:12px; font-weight:400; color:#333; line-height:17px; display:inline-block; position:relative;}
 .comSmTit .titText:first-child {padding-left:0;}
@@ -308,6 +308,9 @@
 .cptGroupTop .unit:first-child {margin-left:0;}
 .cptGroupTop .text {font-size:14px; line-height:1; vertical-align:bottom; color:#333;}
 .cptGroupTop .total {font-size:14px; font-size:400; color:var(--basic-color);}
+.cptGroupTop .year {color:var(--basic-color);} /*20241108 타입추가*/
+.cptGroupTop .month {color:var(--basic-color);} /*20241108 타입추가*/
+.cptGroupTop .business {color:var(--basic-color);} /*20241108 타입추가*/
 .cptGroupTop.soloBtn .inner {display:flex; justify-content: end;}
 .cptGroupTop.soloBtn .inner .blue {padding: 5px 10px; height:auto;}
 
@@ -359,7 +362,7 @@
 .txtRed {color:var(--basic-red) !important;}
 /* 그리드 내부 폼 */
 .cptGrid .frmChoBox.only {width:20px; height:20px; margin:0 auto; display:block; position:relative;}
-.cptGrid .frmChoBox.only .iptChk + .iptLbl {height: 20px; margin: 0; padding-left: 20px;}
+.cptGrid .frmChoBox.only .iptChk + .iptLbl {height: 20px; margin: 0; padding-left: 20px; min-height:auto;}
 .cptGrid .listTit {max-width:calc(100% - 30px); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; display:inline-block; vertical-align:middle;}
 .cptGrid .listTit.hlgt {font-weight:bold; color:#005ce6;}
 .cptGrid .frmGroup input[readonly] {border:0;}
@@ -467,7 +470,7 @@
 .cptTable .tbWrite td {height:42px; padding:6px 10px; font-size:14px; font-weight:500; color:#000; border-bottom:1px solid rgba(132, 132, 132, 0.2);}
 
 .cptTable .tbView {width:100%;}
-.cptTable .tbView thead th {height:42px; font-size:14px; font-weight:500; color:#000; border-right:1px solid rgba(132, 132, 132, 0.2); border-bottom:1px solid rgba(132, 132, 132, 0.2); background:#f5f5f5;}
+.cptTable .tbView thead th {height:42px; font-size:14px; font-weight:500; color:#000; border-right:1px solid rgba(132, 132, 132, 0.2); border-bottom:1px solid rgba(132, 132, 132, 0.2); background:#f5f5f5; padding:6px 10px;}
 .cptTable .tbView thead th:last-child {border-right:0;}
 .cptTable .tbView tbody th {height:42px; padding:10px 10px; font-size:14px; font-weight:500; color:#000; border-right:1px solid rgba(132, 132, 132, 0.2); line-height:20px; border-bottom:1px solid rgba(132, 132, 132, 0.2); background:#f5f5f5;}
 .cptTable .tbView tbody th:last-child {border-right:0;}
@@ -667,14 +670,19 @@
 /* ------------------------------------------------ Form ----------------------------------------------- */
 /* ------------------------------------------------------------------------------------------------------ */
 input[type=text] {width:100%; height:34px; padding-left:12px; font-size:14px; border:1px solid #bbbbbb; border-radius:4px; background:#fff;}
-input[type=text]:disabled {color:#777; background:#efefef;}
+input[type=text]:disabled,
+input[type=text]:read-only {color:#777; background:#efefef;}
 input[type=password] {width:100%; height:34px; padding-left:12px; font-size:14px; border:1px solid #bbbbbb; border-radius:4px;}
 input[type=password]:disabled {color:#777; background:#efefef;}
 input[type=checkbox] {}
 input[type=radio] {}
+input[type=checkbox]:read-only,
+input[type=radio] {color:#777; background:#efefef;}
 input[type="file"] {position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;}
 select {width:100%; height:34px; padding-left:12px; font-size:14px; border:1px solid #bbbbbb; border-radius:4px; background:#fff url(../images/icon/icon_slt.svg) calc(100% - 10px) center no-repeat;}
+select[read-only] {color:#777; background:#efefef;}
 textArea {width:100%; height:150px; font-size:14px; font-weight:400; color:#000;}
+textArea:read-only {color:#777; background:#efefef;}
 input:focus {outline:none;}
 
 /* 기본 */
@@ -698,7 +706,8 @@ select.iptSlt {font-size:14px;}
 .iptDate button {display:none;}
 /* .iptDate .dateBtn {width:38px; height:34px; font-size:0; border:0; background:url(../images/icon/ic_textfield_calendar.svg) center no-repeat; position:absolute; top:0; right:0;} */
 /* // 20230113 달력 버튼 제거 및 배경이미지화 처리*/
-.iptDate + .frmChoBox {margin-left:30px;}
+.iptDate + .frmChoBox,
+.iptSlt + .frmChoBox {margin-left:30px;} 
 .fileBox {position:relative;}
 .fileBox .fileName {width:auto; height:30px; line-height:29px; font-size:14px; color:#000; border:0;}
 .fileBox .fileDel {width:20px; height:20px; margin-left:5px; font-size:0; border:0; background:url(../images/icon/btn_del.svg) center no-repeat;}
@@ -884,9 +893,10 @@ textArea.areaMd {height:150px;}
 .comSideOpt .crudBtn {min-width: 100px; padding: 0 10px; height: 34px; margin-left: 5px; font-size: 14px; font-weight: 400; white-space: nowrap; border-radius: 4px;}
 .comSideOpt .crudBtn:first-child {margin-left:0;}
 .comSideOpt .crudBtn.blue {color: #fff; background: var(--basic-color); border:1px solid var(--basic-color);}
-.comSideOpt .crudBtn.red {color: #fff; background: var(--basic-red); border:1px solid var(--basic-red);}
+.comSideOpt .crudBtn.red {color: #fff; background: #fff; border:1px solid var(--basic-red); color:var(--basic-red);}
 .comSideOpt .crudBtn.dkBlue {color: #fff; background: var(--basic-dkBlue); border:1px solid var(--basic-dkBlue);}
-.comSideOpt .crudBtn.gLine {color:#757575; background:#fff; border:1px solid #9fa0a0;}
+.comSideOpt .crudBtn.gLine {color:#2a2d3e; background:#fff; border:1px solid #9fa0a0;}
+.comSideOpt .crudBtn.gray {color:#fff; background:#9fa0a0; border:1px solid #9fa0a0;}
 .comSideOpt .crudBtn.blLine {color:#2a2d3e; background:#fff; border:1px solid #2a2d3e;}
 .comSideOpt .crudBtn.dkbLine {color: var(--basic-dkBlue); background:#fff; border:1px solid var(--basic-dkBlue);}
 .comSideOpt .crudBtn.bLine {color: var(--basic-color); background:#fff; border:1px solid var(--basic-color);}
@@ -915,7 +925,7 @@ textArea.areaMd {height:150px;}
 .cptVertScr .gridBtn.red {color: #fff; background: var(--basic-red); border:1px solid var(--basic-red);}
 .cptVertScr .gridBtn.purple {color: #fff; border:1px solid var(--basic-purple); background: var(--basic-purple);}
 .cptVertScr .gridBtn.dkBlue {color: #fff; border:1px solid var(--basic-dkBlue); background: var(--basic-dkBlue);}
-.cptVertScr .gridBtn.gLine {color:#2a2d3e; background:#fff; border:1px solid #9fa0a0;}
+.cptVertScr .gridBtn.gLine {color:#2a2d3e; background:#9fa0a0; border:1px solid #9fa0a0;}
 .cptVertScr .gridBtn.blLine {color:#2a2d3e; background:#fff; border:1px solid #2a2d3e;}
 .cptVertScr .gridBtn.dkbLine {color: var(--basic-dkBlue); background:#fff; border:1px solid var(--basic-dkBlue);}
 .cptVertScr .gridBtn.disabled {color: rgba(0, 0, 0, 0.3); border:1px solid rgba(132, 132, 132, 0.2); background:#f7f7f7; cursor:default;}
@@ -932,6 +942,25 @@ textArea.areaMd {height:150px;}
 .cptTable .gridBtn.dkbLine {color: var(--basic-dkBlue); background:#fff; border:1px solid var(--basic-dkBlue);}
 .cptTable .frmGroup .gridBtn {margin-left:5px;}
 .cptTable.complexView .tbView td:first-child {border-left:1px solid rgba(132, 132, 132, 0.2)}
+
+/* ----------------------------------------- 단독사용 button ----------------------------------------- */
+.iptDate + .soloBtn, .iptText + .soloBtn, .iptSlt + .soloBtn, .iptBox + .soloBtn, .iptChk + .soloBtn, .iptLbl + .soloBtn, .iptRdo + .soloBtn {margin-left:10px;}
+.soloBtn.ml {margin-left:10px;}
+.soloBtn {padding:0 10px; height: 30px; margin-left:2px; font-size: 14px; font-weight: 400; white-space: nowrap; border-radius: 4px; background: var(--basic-dkBlue);}
+.soloBtn:first-child {margin-left:0;}
+.soloBtn.blue {color: #fff; background: var(--basic-color); border:1px solid var(--basic-color);}
+.soloBtn.red {color: #fff; background: var(--basic-red); border:1px solid var(--basic-red);}
+.soloBtn.dkBlue {color: #fff; background: var(--basic-dkBlue); border:1px solid var(--basic-dkBlue);}
+.soloBtn.gLine {color:#757575; background:#fff; border:1px solid #9fa0a0;}
+.soloBtn.blLine {color:#2a2d3e; background:#fff; border:1px solid #2a2d3e;}
+.soloBtn.dkbLine {color: var(--basic-dkBlue); background:#fff; border:1px solid var(--basic-dkBlue);}
+.soloBtn.bLine {color: var(--basic-color); background:#fff; border:1px solid var(--basic-color);}
+.soloBtn.purple {color: #fff; background: var(--basic-purple); border:1px solid var(--basic-purple);}
+.soloBtn.up01 {width:20px; height:20px; background:url(../images/common/up01.png)center center no-repeat; border-radius:50%; padding:0; border:1px solid #2a2d3e;}
+.soloBtn.down01 {width:20px; height:20px; background:url(../images/common/down01.png)center center no-repeat; border-radius:50%; padding:0; border:1px solid #2a2d3e;}
+.soloBtn.upTop {width:20px; height:20px; background:url(../images/common/upTop.png)center center no-repeat; border-radius:50%; padding:0; border:1px solid #2a2d3e;}
+.soloBtn.downBottom {width:20px; height:20px; background:url(../images/common/downBottom.png)center center no-repeat; border-radius:50%; padding:0; border:1px solid #2a2d3e;}
+.soloBtn.disabled {color: rgba(0, 0, 0, 0.3); border:1px solid rgba(132, 132, 132, 0.2); background:#f7f7f7; cursor:default;}
 
 /* ------------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------ cpt margin ----------------------------------------------- */
