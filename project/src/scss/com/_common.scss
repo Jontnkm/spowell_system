@@ -326,7 +326,7 @@
 /* ---------------------------- 그리드 :: basic ---------------------------- */
 .cptGrid {width:100%; margin-bottom:10px; border:1px solid #e1e5ef; border-radius:10px;}
 .cptGrid .gridTb {width:100%; border-collapse:collapse; border-spacing:0;}
-.cptGrid .gridTb thead th {padding:5px 5px; height:44px; font-size:14px; font-weight:400; color:#fff; text-align:center; line-height:1.6; background:#2a2d3e;}
+.cptGrid .gridTb thead th {padding:5px 5px; height:44px; font-size:14px; font-weight:400; color:#fff; text-align:center; line-height:1.6; background:#2a2d3e; letter-spacing:-0.1em;}
 .cptGrid .gridTb thead th:first-child {padding-left:20px;}
 .cptGrid .gridTb thead tr:first-child th:first-child {border-radius:10px 0 0 0;}
 .cptGrid .gridTb thead tr:first-child th:last-child {border-radius:0 10px 0 0;}

@@ -20,7 +20,7 @@
 .lytLayout .layoutContainer .layoutNav .btnSlide {width: 16px; height:50px; border:0; font-size:0; background:url(../images/layout/type01/btn_lnbFold.svg) left top no-repeat;}
 .lytLayout .layoutContainer.on .layoutNav .btnSlide {background:url(../images/layout/type01/btn_lnbFold_on.svg) left top no-repeat;}
 
-.lytLayout .layoutContainer .layoutCont {width:calc(100% - 250px); transition:all 0.3s;}
+.lytLayout .layoutContainer .layoutCont {width:calc(100% - 260px); transition:all 0.3s;}
 /* .lytLayout .layoutContainer .layoutCont form {height:100%;} 20230407 폼태그 추가로 무너지는 레이아웃 재구축 *//*팝업 가운데정렬 이슈로 우선 삭제*/
 .lytLayout .layoutContainer.on .layoutCont {width:100%;}
 .lytLayout .layoutContainer .layoutCont .layoutContArea {width:100%; min-height:100%; padding:30px 40px 100px 40px; vertical-align:top; background:#f5f6fa;}
