@@ -216,33 +216,38 @@
             </colgroup>
             <tbody>
                 <tr>
-                    <th>등록일자</th>
-                    <td>
-                        <div class="frmGroup">    
-                            <div class="iptDate"><input type="text" class="iptText" id="datepicker1"></div>
-                            <div class="textBox deco">~</div>
-                            <div class="iptDate"><input type="text" class="iptText" id="datepicker2"></div>
-                            <div class="frmChoBox"><input id="chk001" type="checkbox" class="iptChk"><label for="chk001" class="iptLbl">전체기간</label></div>
-                        </div>
-                    </td>
-                    <th>공제대상월</th>
+                    <th>확정일자</th>
                     <td>
                         <div class="frmGroup">
                             <div class="iptDate"><input type="text" class="iptText" id="datepicker1"></div>
+                            <div class="textBox deco">~</div>
+                            <div class="iptDate"><input type="text" class="iptText" id="datepicker2"></div>
+                            <div class="frmChoBox">
+                                <input id="chk001" type="checkbox" class="iptChk">
+                                <label for="chk001" class="iptLbl">지급종료 제외</label>
+                            </div>
                         </div>
                     </td>
-                </tr>
-                <tr>
                     <th>장애여부</th>
                     <td>
                         <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">비장애</label></div>
                         <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">장애</label></div>
                     </td>
-                    <th>공제상태</th>
+                </tr>
+                <tr>
+                    <th>종목구분</th>
+                    <td>
+                        <div class="frmGroup">
+                            <select name="" id="" class="iptSlt">
+                                <option value="">전체</option>
+                            </select>
+                        </div>
+                    </td>
+                    <th>지급상태</th>
                     <td>
                         <div class="frmChoBox"><input id="rdo101" type="radio" class="iptRdo" name="rdo101"><label for="rdo101" class="iptLbl">전체</label></div>
-                        <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">진행</label></div>
-                        <div class="frmChoBox"><input id="rdo103" type="radio" class="iptRdo" name="rdo101"><label for="rdo103" class="iptLbl">완료</label></div>
+                        <div class="frmChoBox"><input id="rdo102" type="radio" class="iptRdo" name="rdo101"><label for="rdo102" class="iptLbl">지급보류 제외</label></div>
+                        <div class="frmChoBox"><input id="rdo103" type="radio" class="iptRdo" name="rdo101"><label for="rdo103" class="iptLbl">지급보류</label></div>
                     </td>
                 </tr>
                 <tr>
@@ -260,9 +265,7 @@
                             <input type="text" class="iptText">
                         </div>
                     </td>
-                </tr>
-                <tr>
-                    <td colspan="4" class="right">
+                    <td colspan="2" class="right">
                         <button type="button" class="btnSearch">조회</button>
                         <button type="button" class="btnReset">초기화</button>
                     </td>
@@ -299,150 +302,194 @@
             <colgroup>
                 <col style="width:40px;">
                 <col style="width:120px;">
-                <col style="width:70px;">
-                <col style="width:100px;">
-                <col style="width:100px;">
+                <col style="width:150px;">
+                <col style="width:150px;">
 
                 <col style="width:120px;">
                 <col style="width:120px;">
                 <col style="width:120px;">
                 <col style="width:120px;">
-
-                <col style="width:120px;">
                 <col style="width:120px;">
 
-                <col style="width:120px;">
-                <col style="width:120px;">
+                <col style="width:150px;">
+                <col style="width:250px;">
 
                 <col style="width:auto;">
             </colgroup>
             <thead>
                 <tr>
-                    <th rowspan="2">번호</th>
-                    <th rowspan="2">등록일자</th>
-                    <th rowspan="2">장애여부</th>
+                    <th rowspan="2">
+                        <div class="frmChoBox only">
+                            <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
+                        </div>
+                    </th>
+                    <th rowspan="2">확정일자</th>
+                    <th rowspan="2">대상</th>
                     <th rowspan="2">성명</th>
-                    <th rowspan="2">월정금</th>
 
-                    <th colspan="4">공제금액</th>
+                    <th colspan="6">지급계획</th>
 
-                    <th colspan="2">전월누적공제</th>
-
-                    <th colspan="2">잔여공제</th>
+                    <th rowspan="2">지급보류</th>
                     
-                    <th rowspan="2">공제상태</th>
                     <th rowspan="2">기능</th>
                 </tr>
                 <tr>
-                    <th>전체금액</th>
-                    <th>월공제금액</th>
-                    <th>공제시작월</th>
-                    <th>공제종료월</th>
-                    
-                    <th>금액</th>
-                    <th>횟수</th>
-
-                    <th>금액</th>
-                    <th>횟수</th>
+                    <th>지급기준</th>
+                    <th>지급항목</th>
+                    <th>총지급액</th>
+                    <th>월지급액</th>
+                    <th>지급시작</th>
+                    <th>지급종료</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td rowspan="2">1</td>
-                    <td rowspan="2">2024-01-01</td>
-                    <td rowspan="2"><span>비장애</span></td>
-                    <td rowspan="2">
+                    <td>
+                        <div class="frmChoBox only">
+                            <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                        </div>
+                    </td>
+                    <td>2024-01-01</td>
+                    <td>
+                        <span>비장애</span><br>
+                        <span>선수</span><br>
+                        <span>종목명</span>
+                    </td>
+                    <td>
                         <span>00000</span><br>
                         <span>홍길동</span>
                     </td>
-                    <td class="right" rowspan="2">
-                        <span>500,000</span>원
-                    </td>
 
-                    <td class="right" rowspan="2">
-                        <span>4,500,000</span>원
-                    </td>
+                    <td>일회성지급</td>
+                    <td>특별장려금</td>
                     <td class="right">
-                        <span>300,000</span>원
+                        <span>1,000,000</span> 원<br>
+                        <span class="negative"><!--차감의 경우 class="negative"-->
+                            ( - <span>200,000</span>원)
+                        </span>
                     </td>
-                    <td>2024-06</td>
-                    <td>2024-10</td>
+                    <td>2024-01-01</td>
+                    <td>2024-01-01</td>
 
-                    <td class="right">
-                        <span>1,500,000</span>원
+                    <td>
+                        <span>3</span>개월<br>
+                        <span>60,000</span>원<br>
+                        <span>YYYY-MM-DD</span>
                     </td>
-                    <td>5</td>
 
-                    <td class="right">
-                        <span>0</span>원
+                    <td>
+                        종료
                     </td>
-                    <td>0</td>
 
-                    <td rowspan="2"><span class="txtBlue">진행</span></td>
-
-                    <td rowspan="2">
-                        <button type="button" class="gridBtn gLine" onclick="openPopup('sample01')">상세관리</button>
+                    <td>
+                        <button type="button" class="gridBtn gLine" onclick="openPopup('sample01')">체육인정보조회</button>
+                        <!-- <button type="button" class="gridBtn red" onclick="openAlert('splAlt01');">예약취소</button>
+                        <button type="button" class="gridBtn gLine">참가신청서</button>
+                        <button type="button" class="gridBtn gLine">참가동의서</button> -->
                     </td>
                 </tr>
-                <tr class="scndLine">
-                    <td class="right">
-                        <span>300,000</span>원
-                    </td>
-                    <td>2024-06</td>
-                    <td>2024-10</td>
 
-                    <td class="right">
-                        <span>1,500,000</span>원
-                    </td>
-                    <td>5</td>
-
-                    <td class="right">
-                        <span>0</span>원
-                    </td>
-                    <td>0</td>
-                </tr>
-                
                 <tr>
-                    <td rowspan="2">1</td>
-                    <td rowspan="2">2024-01-01</td>
-                    <td rowspan="2"><span>비장애</span></td>
-                    <td rowspan="2">
+                    <td>
+                        <div class="frmChoBox only">
+                            <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                        </div>
+                    </td>
+                    <td>2024-01-01</td>
+                    <td>
+                        <span>비장애</span><br>
+                        <span>선수</span><br>
+                        <span>종목명</span>
+                    </td>
+                    <td>
                         <span>00000</span><br>
                         <span>홍길동</span>
                     </td>
-                    <td class="right" rowspan="2">
-                        <span>500,000</span>원
-                    </td>
 
-                    <td class="right" rowspan="2">
-                        <span>4,500,000</span>원
-                    </td>
+                    <td>일회성지급</td>
+                    <td>특별장려금</td>
                     <td class="right">
-                        <span>300,000</span>원
+                        <span>1,000,000</span> 원<br>
+                        <span class="negative"><!--차감의 경우 class="negative"-->
+                            ( - <span>200,000</span>원)
+                        </span>
                     </td>
-                    <td>2024-06</td>
-                    <td>2024-10</td>
+                    <td>2024-01-01</td>
+                    <td>2024-01-01</td>
 
+                    <td>
+                        <span>3</span>개월<br>
+                        <span>60,000</span>원<br>
+                        <span>YYYY-MM-DD</span>
+                    </td>
+
+                    <td>
+                        <span class="txtBlue">지급보류</span><br>
+                        <span>YYYY-MM-DD</span>
+                        <span class="txtBox clar">~</span>
+                        <span>YYYY-MM-DD</span>
+                    </td>
+
+                    <td>
+                        <button type="button" class="gridBtn gLine" onclick="openPopup('sample01')">체육인정보조회</button>
+                        <!-- <button type="button" class="gridBtn red" onclick="openAlert('splAlt01');">예약취소</button>
+                        <button type="button" class="gridBtn gLine">참가신청서</button>
+                        <button type="button" class="gridBtn gLine">참가동의서</button> -->
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="frmChoBox only">
+                            <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                        </div>
+                    </td>
+                    <td>2024-01-01</td>
+                    <td>
+                        <span>비장애</span><br>
+                        <span>선수</span><br>
+                        <span>종목명</span>
+                    </td>
+                    <td>
+                        <span>00000</span><br>
+                        <span>홍길동</span>
+                    </td>
+
+                    <td>일회성지급</td>
+                    <td>특별장려금</td>
                     <td class="right">
-                        <span>1,500,000</span>원
+                        <span>1,000,000</span> 원<br>
+                        <span class="positive"><!--차감의 경우 class="negative"-->
+                            ( + <span>200,000</span>원)
+                        </span>
                     </td>
-                    <td>5</td>
+                    <td>2024-01-01</td>
+                    <td>2024-01-01</td>
 
-                    <td class="right">
-                        <span>0</span>원
+                    <td>
+                        <span>3</span>개월<br>
+                        <span>60,000</span>원<br>
+                        <span>YYYY-MM-DD</span>
                     </td>
-                    <td>0</td>
 
-                    <td rowspan="2"><span class="txtRed">종료</span></td>
+                    <td>
+                        <span class="txtRed">지급정지</span><br>
+                        <span>YYYY-MM-DD</span>
+                    </td>
 
-                    <td rowspan="2">
-                        <button type="button" class="gridBtn gLine" onclick="openPopup('sample01')">상세관리</button>
+                    <td>
+                        <button type="button" class="gridBtn gLine" onclick="openPopup('sample01')">체육인정보조회</button>
+                        <!-- <button type="button" class="gridBtn red" onclick="openAlert('splAlt01');">예약취소</button>
+                        <button type="button" class="gridBtn gLine">참가신청서</button>
+                        <button type="button" class="gridBtn gLine">참가동의서</button> -->
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
     <!-- //그리드 -->
+
+    <!-- 그리드/테이블 하단 버튼 -->
 
     <!-- 페이징 -->
     <div class="comPaging">
@@ -462,13 +509,6 @@
         </ul>
         <a class="next" href="#"></a>
         <a class="end" href="#"></a>
-    </div>
-
-    <!-- 그리드/테이블 하단 버튼 -->
-    <div class="cptGroupBtm alignR">
-        <div class="comSideOpt">
-            <button type="button" class="srhBtn blue">등록</button>
-        </div>
     </div>
 </div>
 <!-- //컨텐츠 내용 -->

@@ -228,17 +228,17 @@
             </colgroup>
             <tbody>
                 <tr>
-                    <th>업무월</th>
+                    <th>사업년도</th>
                     <td>
                         <div class="frmGroup">
                             <select name="" id="" class="iptSlt frmSm">
                                 <option value="">시도 전체</option>
                                 <option value=""></option>
                             </select>
-                            <select name="" id="" class="iptSlt frmSm">
+                            <!-- <select name="" id="" class="iptSlt frmSm">
                                 <option value="">센터 전체</option>
                                 <option value=""></option>
-                            </select>
+                            </select> -->
                         </div>
                     </td>
                     <th>등록일자</th>
@@ -270,12 +270,11 @@
                         </div>
                     </td>
                 </tr>
-                
                 <tr>
                     <td colspan="4" class="right">
-                        <button class="btnSearch">검색</button>
-                        <button class="btnReset">초기화</button>
-                        <!-- <button class="btnDetail">상세검색</button> -->
+                        <button type="button" class="btnSearch">검색</button>
+                        <button type="button" class="btnReset">초기화</button>
+                        <!-- <button type="button" class="btnDetail">상세검색</button> -->
                     </td>
                 </tr>
             </tbody>
@@ -291,14 +290,14 @@
             <div class="comSideOpt">
                 <ul class="opList">
                     <li class="item">
-                        <button class="viewBtn on">10건</button>
-                        <button class="viewBtn">20건</button>
-                        <button class="viewBtn">50건</button>
-                        <button class="viewBtn">100건</button>
+                        <button type="button" class="viewBtn on">10건</button>
+                        <button type="button" class="viewBtn">20건</button>
+                        <button type="button" class="viewBtn">50건</button>
+                        <button type="button" class="viewBtn">100건</button>
                     </li>
-                    <li class="item">
-                        <button class="srhBtn bLine">엑셀다운로드</button>
-                    </li>
+                    <!-- <li class="item">
+                        <button type="button" class="srhBtn bLine">엑셀다운로드</button>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -309,14 +308,11 @@
         <table class="gridTb">
             <colgroup>
                 <col style="width:40px;">
-                <col style="width:120px;">
+                <col style="width:100px;">
                 <col style="width:auto;">
-                <col style="width:70px;">
-                <col style="width:70px;">
-                <col style="width:70px;">
-                <col style="width:70px;">
-                <col style="width:70px;">
-                <col style="width:70px;">
+                <col style="width:100px;">
+                <col style="width:100px;">
+                <col style="width:100px;">
                 <col style="width:120px;">
                 <col style="width:150px;">
             </colgroup>
@@ -327,14 +323,11 @@
                             <input id="chkAll101" type="checkbox" class="iptChk"><label for="chkAll101" class="iptLbl"></label>
                         </div>
                     </th>
-                    <th>업무월</th>
+                    <th>사업년도</th>
                     <th>제목</th>
-                    <th>구분</th>
-                    <th>선수</th>
-                    <th>지도자</th>
-                    <th>전체</th>
-                    <th>중복</th>
-                    <th>삭제</th>
+                    <th>장애여부</th>
+                    <th>등록</th>
+                    <th>중복제외</th>
                     <th>등록일자</th>
                     <th>기능</th>
                 </tr>
@@ -346,17 +339,14 @@
                             <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
                         </div>
                     </td>
-                    <td>0000-00</td>
-                    <td class="left">제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트</td>
+                    <td>0000</td>
+                    <td class="left">제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트</td>
                     <td>비장애</td>
-                    <td>000건</td>
-                    <td>000건</td>
-                    <td>000건</td>
-                    <td>000건</td>
-                    <td>000건</td>
+                    <td><span>000</span>건</td>
+                    <td><span>000</span>건</td>
                     <td>0000-00-00</td>
                     <td>
-                        <button class="gridBtn gLine">내역조회</button>
+                        <button type="button" class="gridBtn gLine">내역조회</button>
                     </td>
                 </tr>
                 <tr>
@@ -365,60 +355,80 @@
                             <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
                         </div>
                     </td>
-                    <td>0000-00</td>
+                    <td>0000</td>
                     <td class="left">제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트</td>
                     <td>비장애</td>
-                    <td>000건</td>
-                    <td>000건</td>
-                    <td>000건</td>
-                    <td>000건</td>
-                    <td>000건</td>
+                    <td><span>000</span>건</td>
+                    <td><span>000</span>건</td>
                     <td>0000-00-00</td>
                     <td>
-                        <button class="gridBtn gLine">내역조회</button>
+                        <button type="button" class="gridBtn gLine">내역조회</button>
                     </td>
                 </tr>
-                
                 <tr>
                     <td>
                         <div class="frmChoBox only">
                             <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
                         </div>
                     </td>
-                    <td>0000-00</td>
+                    <td>0000</td>
                     <td class="left">제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트</td>
                     <td>비장애</td>
-                    <td>000건</td>
-                    <td>000건</td>
-                    <td>000건</td>
-                    <td>000건</td>
-                    <td>000건</td>
+                    <td><span>000</span>건</td>
+                    <td><span>000</span>건</td>
                     <td>0000-00-00</td>
                     <td>
-                        <button class="gridBtn gLine">내역조회</button>
+                        <button type="button" class="gridBtn gLine">내역조회</button>
                     </td>
                 </tr>
-                
                 <tr>
                     <td>
                         <div class="frmChoBox only">
                             <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
                         </div>
                     </td>
-                    <td>0000-00</td>
+                    <td>0000</td>
                     <td class="left">제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트</td>
                     <td>비장애</td>
-                    <td>000건</td>
-                    <td>000건</td>
-                    <td>000건</td>
-                    <td>000건</td>
-                    <td>000건</td>
+                    <td><span>000</span>건</td>
+                    <td><span>000</span>건</td>
                     <td>0000-00-00</td>
                     <td>
-                        <button class="gridBtn gLine">내역조회</button>
+                        <button type="button" class="gridBtn gLine">내역조회</button>
                     </td>
                 </tr>
-                
+                <tr>
+                    <td>
+                        <div class="frmChoBox only">
+                            <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                        </div>
+                    </td>
+                    <td>0000</td>
+                    <td class="left">제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트</td>
+                    <td>비장애</td>
+                    <td><span>000</span>건</td>
+                    <td><span>000</span>건</td>
+                    <td>0000-00-00</td>
+                    <td>
+                        <button type="button" class="gridBtn gLine">내역조회</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="frmChoBox only">
+                            <input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl"></label>
+                        </div>
+                    </td>
+                    <td>0000</td>
+                    <td class="left">제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트제목테스트</td>
+                    <td>비장애</td>
+                    <td><span>000</span>건</td>
+                    <td><span>000</span>건</td>
+                    <td>0000-00-00</td>
+                    <td>
+                        <button type="button" class="gridBtn gLine">내역조회</button>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
@@ -428,12 +438,12 @@
     <div class="cptGroupBtnCov">
         <div class="cptGroupBtm alignL">
             <div class="comSideOpt">
-                <button class="srhBtn red" onclick="openPopup('splAlt01')">선택삭제</button>
+                <button type="button" class="srhBtn dkBlue" onclick="openPopup('splAlt01')">선택삭제</button>
             </div>
         </div>
         <div class="cptGroupBtm alignR">
             <div class="comSideOpt">
-                <button class="srhBtn blue">등록</button>
+                <button type="button" class="crudBtn blue">등록</button>
             </div>
         </div>
     </div>
@@ -457,15 +467,16 @@
         <a class="next" href="#"></a>
         <a class="end" href="#"></a>
     </div>
+    
 </div>
 <!-- //컨텐츠 내용 -->
-<div id="splAlt01" class="modAlert on"> <!-- addClass - on:팝업오픈 -->
+<div id="splAlt01" class="modAlert"> <!-- addClass - on:팝업오픈 -->
     <div class="alertArea">
         <div class="alertTit">알림  메세지</div>
         <div class="alertCont">데이터를 삭제해도 등록처리 된 실적자료는 삭제되지 않습니다.<br>일괄등록 데이터를 삭제 하시겠습니까?</div>
         <div class="alertBtm">
-            <button class="btn gLine" onclick="closeAlert('splAlt01');">취소</button>
-            <button class="btn dkBlue">확인</button>
+            <button type="button" class="btn gLine" onclick="closeAlert('splAlt01');">취소</button>
+            <button type="button" class="btn dkBlue">확인</button>
         </div>
     </div>
 </div>

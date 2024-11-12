@@ -216,76 +216,27 @@
         <p> </p>
     </div> -->
     <br>
-    <!-- 검색조건 -->
-    <div class="cptSearchArea">
-        <table>
-            <caption></caption>
-            <colgroup>
-                <col style="width:150px;" />
-                <col style="width:auto;" />
-                <col style="width:150px;" />
-                <col style="width:auto;" />
-            </colgroup>
-            <tbody>
-                <tr>
-                    <th>대상구분</th>
-                    <td>
-                        <div class="frmGroup">
-                            <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">전체</label></div>
-                            <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">선수</label></div>
-                            <div class="frmChoBox"><input id="rdo003" type="radio" class="iptRdo" name="rdo001"><label for="rdo003" class="iptLbl">지도자</label></div>    
-                        </div>
-                    </td>
-                    <th>중복확인</th>
-                    <td>
-                        <div class="frmGroup">
-                            <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">전체</label></div>
-                            <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">정상</label></div>
-                            <div class="frmChoBox"><input id="rdo003" type="radio" class="iptRdo" name="rdo001"><label for="rdo003" class="iptLbl">중복</label></div>
-                            <div class="frmChoBox"><input id="rdo003" type="radio" class="iptRdo" name="rdo001"><label for="rdo003" class="iptLbl">삭제</label></div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th>키워드</th>
-                    <td>
-                        <div class="frmGroup">
-                            <select name="" id="" class="iptSlt frmSm">
-                                <option value="">제목</option>
-                                <option value=""></option>
-                            </select>
-                            <input type="text" class="iptText">
-                        </div>
-                    </td>
-                </tr>
-                
-                <tr>
-                    <td colspan="4" class="right">
-                        <button class="btnSearch">검색</button>
-                        <button class="btnReset">초기화</button>
-                        <!-- <button class="btnDetail">상세검색</button> -->
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
     
     <!-- 그리드/테이블 상단 -->
     <div class="cptGroupTop">
         <div class="alignL">
-            <div class="unit"><span class="text">조회결과 (총 <span class="total">100</span>건)</span><span class="text"> / 중복제외 (총 <span class="total">100</span>건)</span><span class="text"> / 삭제 (총 <span class="total">100</span>건)</span></div>
+            <div class="unit">
+                <span class="text">사업년도 <span class="year">2024</span>년</span>
+                <span class="text"> / 제목 : <span class="total">~~~~~~~~~~</span></span>
+                <span class="text"> / <span>비장애</span></span>
+            </div>
         </div>
         <div class="alignR">
             <div class="comSideOpt">
                 <ul class="opList">
+                    <!-- <li class="item">
+                        <button type="button" class="viewBtn on">10건</button>
+                        <button type="button" class="viewBtn">20건</button>
+                        <button type="button" class="viewBtn">50건</button>
+                        <button type="button" class="viewBtn">100건</button>
+                    </li> -->
                     <li class="item">
-                        <button class="viewBtn on">10건</button>
-                        <button class="viewBtn">20건</button>
-                        <button class="viewBtn">50건</button>
-                        <button class="viewBtn">100건</button>
-                    </li>
-                    <li class="item">
-                        <button class="srhBtn bLine">엑셀다운로드</button>
+                        <button type="button" class="srhBtn bLine">엑셀다운로드</button>
                     </li>
                 </ul>
             </div>
@@ -300,150 +251,133 @@
                 <col style="width:70px;">
 
                 <col style="width:75px;">
-                <col style="width:70px;">
-                <col style="width:70px;">
-                <col style="width:70px;">
-                <col style="width:70px;">
+                <col style="width:75px;">
+                <col style="width:75px;">
+                <col style="width:75px;">
+                <col style="width:75px;">
                 <col style="width:150px;">
+                <col style="width:150px;">
+                <col style="width:200px;">
+                <col style="width:150px;">
+
+                <col style="width:100px;">
+                <col style="width:100px;">
+                <col style="width:100px;">
+                <col style="width:100px;">
+                <col style="width:100px;">
+
+                <col style="width:100px;">
+                <col style="width:100px;">
+                <col style="width:100px;">
+                <col style="width:100px;">
+                <col style="width:100px;">
+
                 <col style="width:100px;">
                 <col style="width:150px;">
 
-                <col style="width:100px;">
-                <col style="width:70px;">
-                <col style="width:200px;">
-
-                <col style="width:200px;">
-                <col style="width:70px;">
-                <col style="width:70px;">
-                <col style="width:120px;">
-                <col style="width:120px;">
-
-                <col style="width:70px;">
-                <col style="width:200px;">
-                <col style="width:70px;">
-                <col style="width:70px;">
-                <col style="width:120px;">
-                <col style="width:100px;">
-                <col style="width:150px;">
-
-                <col style="width:70px;">
-                <col style="width:70px;">
-                <col style="width:70px;">
+                <col style="width:250px;">
             </colgroup>
             <thead>
                 <tr>
                     <th rowspan="2">번호</th>
                     <th rowspan="2">중복제외</th>
 
-                    <th colspan="8">체육인정보</th>
-                    <th colspan="3">지원신청정보</th>
-                    <th colspan="5">실적대회정보</th>
-                    <th colspan="7">대회실적정보</th>
-                    <th colspan="3">평가점수</th>
+                    <th colspan="9">체육인정보</th>
+                    <th colspan="5">신청자격</th>
+                    <th colspan="5">우선순위</th>
+                    <th colspan="2">지급신청</th>
+                    
+                    <th rowspan="2">비고</th>
                 </tr>
-                <tr>
+                <tr class="scndLine">
                     <th>장애구분</th>
                     <th>장애유형</th>
-                    <th>장애대상구분</th>
+                    <th>종목</th>
                     <th>성명</th>
                     <th>성별</th>
                     <th>주민등록번호</th>
-                    <th>소속</th>
                     <th>휴대전화번호</th>
+                    <th>메일주소</th>
+                    <th>소속</th>
 
-                    <th>포상금구분</th>
-                    <th>은행</th>
+                    <th>국가대표<br>이력</th>
+                    <th>기초생활<br>수급자</th>
+                    <th>차상위<br>계층</th>
+                    <th>단체<br>추천</th>
+                    <th>전년도<br>수혜여부</th>
+
+                    <th>경기력<br>성과포상금<br>수혜여부</th>
+                    <th>사회복지사업<br>수혜여부</th>
+                    <th>기타공단지원<br>수혜여부</th>
+                    <th>최근1년<br>국가대표이력</th>
+                    <th>2개월 이상<br>장기부상자</th>
+
+                    <th>은행명</th>
                     <th>계좌번호</th>
-
-                    <th>대회명</th>
-                    <th>개최주기</th>
-                    <th>출전국 수</th>
-                    <th>개최일</th>
-                    <th>종료일</th>
-
-                    <th>종목</th>
-                    <th>세부종목</th>
-                    <th>실적구분</th>
-                    <th>순위</th>
-                    <th>입상일</th>
-                    <th>지도자인원</th>
-                    <th>지도선수</th>
-
-                    <th>기존점수</th>
-                    <th>추가점수</th>
-                    <th>계</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>1</td>
-                    <td></td>
+                    <td><span class="txtRed">삭제</span></td>
 
                     <td>비장애</td>
                     <td></td>
-                    <td>지도자</td>
+                    <td>근대5종</td>
                     <td>홍길동</td>
                     <td>남</td>
                     <td>000000-0000000</td>
-                    <td>충청북도체육회</td>
                     <td>010-0000-0000</td>
+                    <td>member_id@email.com</td>
+                    <td>충청북도체육회</td>
 
-                    <td>특별장려금</td>
-                    <td>국민</td>
+                    <td>Y</td>
+                    <td>N</td>
+                    <td>Y</td>
+                    <td>N</td>
+                    <td>Y</td>
+
+                    <td>Y</td>
+                    <td>N</td>
+                    <td>Y</td>
+                    <td>N</td>
+                    <td>Y</td>
+
+                    <td>국민은행</td>
                     <td>000000-00-000000</td>
-
-                    <td>2022 항저우아시안게임</td>
-                    <td>4</td>
-                    <td>9</td>
-                    <td>YYYY-MM-DD</td>
-                    <td>YYYY-MM-DD</td>
-
-                    <td>롤러</td>
-                    <td>롤러스테이트 EP10000M</td>
-                    <td>개인</td>
-                    <td>1</td>
-                    <td>2003-12-19</td>
-                    <td>2</td>
-                    <td>홍길동, 임꺽정</td>
                     
-                    <td>20</td>
-                    <td>10</td>
-                    <td>30</td>
+                    <td>비고내용 영역</td>
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td><span class="txtRed">중복</span></td>
+                    <td><span class="txtBlue">중복</span></td>
 
-                    <td>장애</td>
-                    <td>시각</td>
-                    <td>선수</td>
+                    <td>비장애</td>
+                    <td></td>
+                    <td>근대5종</td>
                     <td>홍길동</td>
                     <td>남</td>
                     <td>000000-0000000</td>
-                    <td>충청북도체육회</td>
                     <td>010-0000-0000</td>
+                    <td>member_id@email.com</td>
+                    <td>충청북도체육회</td>
 
-                    <td>특별장려금</td>
-                    <td>국민</td>
+                    <td>Y</td>
+                    <td>N</td>
+                    <td>Y</td>
+                    <td>N</td>
+                    <td>Y</td>
+
+                    <td>Y</td>
+                    <td>N</td>
+                    <td>Y</td>
+                    <td>N</td>
+                    <td>Y</td>
+
+                    <td>국민은행</td>
                     <td>000000-00-000000</td>
-
-                    <td>2022 항저우아시안게임</td>
-                    <td>4</td>
-                    <td>9</td>
-                    <td>YYYY-MM-DD</td>
-                    <td>YYYY-MM-DD</td>
-
-                    <td>롤러</td>
-                    <td>롤러스테이트 EP10000M</td>
-                    <td>개인</td>
-                    <td>1</td>
-                    <td>2003-12-19</td>
-                    <td>-</td>
-                    <td>-</td>
                     
-                    <td>20</td>
-                    <td>10</td>
-                    <td>30</td>
+                    <td>비고내용 영역</td>
                 </tr>
             </tbody>
         </table>
@@ -451,8 +385,7 @@
     <!-- //그리드 -->
     <div class="appFrmDesc">
         <p> </p>
-        <p>중복확인의 중복 건은 일괄등록에서 제외하고 등록처리 됩니다.</p>
-        <p>중복확인 기준 : 장애여부 + 대상구분 + 성명 + 주민등록번호 + 입상일 + 기타정보가 모두 일치하는 최근 실적이 존재</p>
+        <p>중복확인의 중복 건은 일괄등록에서 제외하고 &lt;일괄등록 데이터관리&gt;에 등록처리 됩니다.</p>
         <p> </p>
     </div>
 
@@ -460,7 +393,7 @@
     <div class="cptGroupBtnCov">
         <div class="cptGroupBtm alignR">
             <div class="comSideOpt">
-                <button class="srhBtn gLine">목록</button>
+                <button type="button" class="crudBtn dkBlue">목록</button>
             </div>
         </div>
     </div>
