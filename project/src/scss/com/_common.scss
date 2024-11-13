@@ -692,7 +692,7 @@ input.iptChk {width:1px; height:1px; position:absolute; left:0; top:0; opacity:0
 input.iptRdo {width:1px; height:1px; position:absolute; left:0; top:0; opacity:0.01;}
 label.iptLbl {display:inline-block;}
 select.iptSlt {font-size:14px;}
-.textBox {width:max-content; min-width: max-content; height:34px;margin-left:5px;  line-height:37px; display:inline-block;}
+.textBox {width:max-content; min-width: max-content; height:34px;margin-left:5px;  line-height:37px; display:inline-block; font-size:14px; color:#333; font-weight:500;}
 .fileAfter .textBox {margin-left:5px; height:34px; line-height:37px; display:inline-block; cursor:pointer; padding-left:20px; position:relative; text-decoration:underline;}/*20240419 추가*/
 .fileAfter .textBox::before {content: ''; position:absolute; top:50%; left:0; width:13px; height:17px; background:url(../images/common/btn_download.png)50% 50% no-repeat;  transform:translateY(-50%);}/*20240419 추가*/
 .textBoxFnt {margin-right:5px; height:34px; line-height:37px; display:inline-block; min-width:40px;}
