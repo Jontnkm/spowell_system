@@ -22,6 +22,12 @@
                 }
             }
         }
+
+        td {
+            > span.marked {
+                display:inline-block; width:25px; height:25px; background:var(--basic-color); border-radius:50%;
+            }
+        }
     }
 }
 
@@ -56,6 +62,7 @@
         }
 
         td {
+            transition:all 0.4s;
             > p {
                 position:relative; padding-left:12px; 
                 &::before {content:''; position:absolute; top:50%; left:0; width:3px; height:3px; background:#333; border-radius:50%; transform:translateY(-50%);}
@@ -66,7 +73,7 @@
                 
         }
 
-        th {border:1px solid rgba(255,255,255,0.1);}
+        th {transition:all 0.4s; border:1px solid rgba(255,255,255,0.1);}
     }
 }
 
@@ -97,8 +104,10 @@
 
 /*그리드 & 테이블 시작 전 또는 맨 하단 별도 옵션 영역의 안내 문구 및 버튼 기능 영역 추가*/
 .listDescription {
-    width:100%; position:relative; padding: 40px; background:#f5f5f5;
-
+    width:100%; position:relative; padding: 20px; background:#f5f5f5;
+    &.pad40 {
+        padding:40px;
+    }
     p {
         font-size:16px; color:#333; font-weight:500; line-height:22px; letter-spacing:-0.3px; text-align:center; 
     }
